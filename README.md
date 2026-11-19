@@ -1,40 +1,9 @@
-# site-principal
+# Ariramba Sistemas
 
-Site institucional da Ariramba Sistemas em HTML, CSS e JS puros (sem build, sem dependências).
+A Ariramba é uma empresa de tecnologia que cria sites, sistemas web, aplicativos, automações com IA, consultoria e suporte para pessoas, profissionais e empresas.
 
-```
-index.html
-css/style.css
-js/main.js
-img/
-CNAME        # arirambasistemas.com.br
-```
+Queremos remover a barreira técnica para que todos extraiam o máximo da tecnologia a seu favor, com a tecnologia certa para cada necessidade.
 
-## Desenvolvimento
+Usamos IA em nossos processos para entregar resultados práticos, com mais qualidade, desempenho e rapidez.
 
-Abra `index.html` no navegador ou sirva a pasta:
-
-```bash
-python3 -m http.server 8000
-```
-
-## Deploy (GitHub Pages)
-
-Automático via `.github/workflows/deploy.yml` a cada push na `main`.
-Configuração única: **Settings → Pages → Source: GitHub Actions**.
-
-## DNS do domínio
-
-| Tipo | Nome | Valor |
-|---|---|---|
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-| CNAME | www | arirambasistemas.github.io |
-
-Depois, em Settings → Pages, ative **Enforce HTTPS**.
-
-## Pendências de conteúdo
-
-Placeholders em `index.html`: `[e-mail de contato]`, `[número de contato]`; redes sociais do rodapé apontam para `#contato`.
+> Soluções tecnológicas para quem não pode perder tempo.

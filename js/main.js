@@ -87,11 +87,11 @@ $$('.reveal').forEach((el) => io.observe(el));
 // Processo em tela cheia: a etapa ativa ocupa a tela inteira
 (() => {
   const steps = [
-    ['01', 'Diagnóstico', 'Diagnóstico de automação', 'Mapeamos processos, gargalos e oportunidades, e priorizamos o que traz retorno mais rápido.', '24h a 48h'],
-    ['02', 'Planejamento', 'Desenho da solução', 'Definimos escopo, fluxos, integrações e arquitetura antes de escrever o primeiro código.', '3 a 7 dias'],
-    ['03', 'Implantação', 'Implantação da solução', 'Construímos a automação, o sistema, o site ou o aplicativo em entregas curtas, com feedback a cada ciclo.', '2 a 6 semanas'],
-    ['04', 'Validação', 'Testes e segurança', 'Testamos desempenho, segurança e usabilidade com a sua equipe antes de entrar em produção.', '3 a 7 dias'],
-    ['05', 'Evolução', 'Evolução contínua', 'Suporte, infraestrutura, monitoramento e melhorias mensais para a solução crescer com a sua empresa.', 'Contínuo'],
+    ['01', 'Diagnóstico', 'Entendemos o seu problema', 'Conversamos para entender o que toma o seu tempo e priorizamos o que traz resultado mais rápido.', '24h a 48h'],
+    ['02', 'Planejamento', 'Desenhamos a solução', 'Definimos escopo, fluxos e tecnologias antes de escrever a primeira linha de código.', '3 a 7 dias'],
+    ['03', 'Desenvolvimento', 'Construímos com você', 'Desenvolvemos com apoio de IA para entregar mais rápido e com mais qualidade, em partes curtas que você acompanha e aprova.', '2 a 6 semanas'],
+    ['04', 'Validação', 'Testamos antes de publicar', 'Testamos desempenho, segurança e usabilidade, com revisão assistida por IA, antes de colocar no ar.', '3 a 7 dias'],
+    ['05', 'Suporte', 'Cuidamos depois do lançamento', 'Hospedagem, monitoramento, manutenção e melhorias para o projeto continuar funcionando e evoluindo.', 'Contínuo'],
   ];
   const stage = document.getElementById('pstage');
   const dots = [...document.querySelectorAll('#pdots li')];
@@ -109,7 +109,8 @@ $$('.reveal').forEach((el) => io.observe(el));
       document.getElementById('pdur').textContent = dur;
       document.getElementById('pcount').textContent = num + ' / 05';
       document.querySelectorAll('#pstage .pbg-i').forEach((el, k) => el.classList.toggle('on', k === i));
-      dots.forEach((d, k) => d.classList.toggle('on', k <= i));
+      dots.forEach((d, k) => { d.classList.toggle('on', k <= i); d.classList.toggle('cur', k === i); });
+      document.getElementById('pHint').classList.toggle('gone', i > 0);
     };
     if (first || reduce) { apply(); return; }
     stage.classList.add('swap');
@@ -120,6 +121,23 @@ $$('.reveal').forEach((el) => io.observe(el));
   }, { rootMargin: '-45% 0px -45% 0px' });
   document.querySelectorAll('.pstep').forEach((el) => io.observe(el));
   show(0);
+
+  // Navegação: pontos, setas e teclado levam à posição da etapa na rolagem
+  const story = document.getElementById('pstory');
+  const goTo = (i) => {
+    const base = story.getBoundingClientRect().top + scrollY;
+    const top = i > 4 ? base + 6 * innerHeight : base + (Math.max(0, i) + 1) * innerHeight;
+    scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' });
+  };
+  document.querySelectorAll('#pdots button').forEach((b) => b.addEventListener('click', () => goTo(+b.dataset.go)));
+  addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    if (/input|textarea|select/i.test(document.activeElement.tagName)) return;
+    const r = stage.getBoundingClientRect();
+    if (r.top > 1 || r.bottom < innerHeight - 1) return;
+    e.preventDefault();
+    goTo(current + (e.key === 'ArrowRight' ? 1 : -1));
+  });
 })();
 
 // Contadores
@@ -159,16 +177,6 @@ if (!reduce && matchMedia('(pointer: fine)').matches) {
     card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
     card.style.setProperty('--my', (e.clientY - r.top) + 'px');
   }));
-
-  // Inclinação 3D do painel do hero
-  const fc = $('#flowCard');
-  fc.addEventListener('pointermove', (e) => {
-    const r = fc.getBoundingClientRect();
-    const rx = ((e.clientY - r.top) / r.height - 0.5) * -8;
-    const ry = ((e.clientX - r.left) / r.width - 0.5) * 8;
-    fc.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-  });
-  fc.addEventListener('pointerleave', () => { fc.style.transform = ''; });
 }
 
 // Voltar ao topo
@@ -190,7 +198,7 @@ form.addEventListener('submit', (e) => {
     form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake');
     return;
   }
-  showMsg('Recebido, ' + name + '. Entraremos em contato em breve. (Protótipo: o envio real depende de um backend.)', true, 'i-check');
+  showMsg('Recebido, ' + name + '! Entraremos em contato em até 48h. (Protótipo: o envio real depende de um backend.)', true, 'i-check');
   form.reset();
 });
 
@@ -245,3 +253,29 @@ const makeCard = (t, dup) => {
 // Duas cópias da lista: a animação leva de 0 a -50%, então o loop é contínuo
 TECH.forEach((t) => strip.appendChild(makeCard(t, false)));
 TECH.forEach((t) => strip.appendChild(makeCard(t, true)));
+
+// Hero: ícones surgem e, depois, os textos são digitados
+(() => {
+  const meta = document.querySelector('.hero-meta');
+  if (!meta || reduce) return;
+  const items = [...meta.children];
+  const els = items.flatMap((it) => [...it.querySelectorAll('.t')]);
+  const full = els.map((el) => el.textContent);
+  meta.style.minHeight = meta.offsetHeight + 'px';
+  els.forEach((el) => { el.textContent = ''; });
+  items.forEach((it, k) => it.style.setProperty('--k', k));
+  meta.classList.add('go');
+  const type = (i) => {
+    if (i >= els.length) return;
+    const el = els[i], txt = full[i];
+    el.classList.add('typing');
+    let n = 0;
+    const tick = () => {
+      el.textContent = txt.slice(0, ++n);
+      if (n < txt.length) setTimeout(tick, el.tagName === 'B' ? 55 : 38);
+      else { el.classList.remove('typing'); setTimeout(() => type(i + 1), el.tagName === "B" ? 420 : 120); }
+    };
+    tick();
+  };
+  setTimeout(() => type(0), items.length * 420 + 400);
+})();
