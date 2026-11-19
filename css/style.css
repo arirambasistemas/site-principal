@@ -749,7 +749,7 @@ footer { border-top: 1px solid var(--glass-border); padding-block: 40px; }
   background: linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.015)); border: 1px solid var(--glass-border);
   box-shadow: 0 18px 40px -24px rgba(228,87,74,.35); }
 .hero-meta .ico { font-size: 26px; margin-bottom: 6px; opacity: 0; transform: scale(.3) rotate(-25deg); }
-.hero-meta.go > div .ico { animation: metaIcon .6s var(--ease) forwards; animation-delay: calc(var(--k) * 420ms); }
+.hero-meta.go > div .ico { animation: metaIcon .4s var(--ease) forwards; animation-delay: calc(var(--k) * 140ms); }
 .hero-meta b { font-size: 1.12rem; }
 .hero-meta span.t { font-size: .74rem; }
 .hero-meta .t { min-height: 1.3em; }

@@ -287,10 +287,10 @@ requestAnimationFrame(() => setTimeout(() => {
     let n = 0;
     const tick = () => {
       el.textContent = txt.slice(0, ++n);
-      if (n < txt.length) setTimeout(tick, el.tagName === 'B' ? 55 : 38);
-      else { el.classList.remove('typing'); setTimeout(() => type(i + 1), el.tagName === "B" ? 420 : 120); }
+      if (n < txt.length) setTimeout(tick, el.tagName === 'B' ? 18 : 12);
+      else { el.classList.remove('typing'); setTimeout(() => type(i + 1), el.tagName === "B" ? 80 : 30); }
     };
     tick();
   };
-  setTimeout(() => type(0), items.length * 420 + 400);
+  setTimeout(() => type(0), items.length * 140 + 150);
 }, 0));
