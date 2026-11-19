@@ -29,9 +29,11 @@ $('#year').textContent = new Date().getFullYear();
 // Barra de progresso de leitura + cabeçalho que some ao descer
 const header = $('#siteHeader');
 let lastY = 0;
+let maxScroll = 0;
+const measure = () => { maxScroll = document.documentElement.scrollHeight - innerHeight; };
 const onScroll = () => {
   const y = scrollY;
-  const max = document.documentElement.scrollHeight - innerHeight;
+  const max = maxScroll;
   $('#readProgress').style.setProperty('--sp', max > 0 ? (y / max).toFixed(4) : 0);
   header.classList.toggle('scrolled', y > 24);
   header.classList.remove('hidden');
@@ -39,7 +41,10 @@ const onScroll = () => {
   $('#toTop').classList.toggle('show', y > 600);
 };
 addEventListener('scroll', onScroll, { passive: true });
-onScroll();
+// Leituras de layout só depois da primeira pintura (evita reflow forçado no carregamento)
+requestAnimationFrame(() => setTimeout(() => { measure(); onScroll(); }, 0));
+addEventListener('resize', () => { measure(); onScroll(); });
+if ('ResizeObserver' in window) new ResizeObserver(() => { measure(); }).observe(document.body);
 
 // Navegação desktop: destaca a seção visível e move o indicador.
 const menuLinks = $$('.menu a[data-spy]');
@@ -251,11 +256,21 @@ const makeCard = (t, dup) => {
   return card;
 };
 // Duas cópias da lista: a animação leva de 0 a -50%, então o loop é contínuo
-TECH.forEach((t) => strip.appendChild(makeCard(t, false)));
-TECH.forEach((t) => strip.appendChild(makeCard(t, true)));
+const buildTech = () => {
+  const frag = document.createDocumentFragment();
+  TECH.forEach((t) => frag.appendChild(makeCard(t, false)));
+  TECH.forEach((t) => frag.appendChild(makeCard(t, true)));
+  strip.appendChild(frag);
+};
+if ('IntersectionObserver' in window) {
+  const techIo = new IntersectionObserver((en) => {
+    if (en[0].isIntersecting) { techIo.disconnect(); buildTech(); }
+  }, { rootMargin: '900px 0px' });
+  techIo.observe(document.getElementById('tecnologias') || strip);
+} else buildTech();
 
 // Hero: ícones surgem e, depois, os textos são digitados
-(() => {
+requestAnimationFrame(() => setTimeout(() => {
   const meta = document.querySelector('.hero-meta');
   if (!meta || reduce) return;
   const items = [...meta.children];
@@ -278,4 +293,4 @@ TECH.forEach((t) => strip.appendChild(makeCard(t, true)));
     tick();
   };
   setTimeout(() => type(0), items.length * 420 + 400);
-})();
+}, 0));

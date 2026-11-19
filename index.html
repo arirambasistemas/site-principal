@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariramba Sistemas | Soluções tecnológicas para quem não pode perder tempo</title>
   <meta name="description" content="Sites, sistemas, aplicativos e automações com IA: a tecnologia certa para cada necessidade, com resultados práticos e em menos tempo para pessoas, profissionais e empresas." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="fonts/raleway.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/plusjakarta.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="icon" type="image/png" href="img/favicon.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 <body>
 
@@ -101,7 +100,7 @@
   <header class="site" id="siteHeader">
     <div class="container nav">
       <a href="#inicio" class="brand" aria-label="Ariramba Sistemas - início">
-        <img src="img/logo-ariramba.jpg" alt="" width="38" height="38" />
+        <img src="img/logo-ariramba.webp" alt="" width="38" height="38" decoding="async" />
         Ariramba
       </a>
       <nav aria-label="Principal">
@@ -141,8 +140,8 @@
       <div class="container hero-grid">
         <div>
           <h1 class="display" id="heroTitle">Extraia o máximo da tecnologia <span class="grad-text">a seu favor.</span></h1>
-          <p class="hero-lead reveal">Você escolhe o que precisa. Nós cuidamos da tecnologia.</p>
-          <p class="sub reveal">Aplicamos a tecnologia certa a cada necessidade e usamos IA em nossos processos para entregar sites, sistemas, aplicativos e automações com mais qualidade, desempenho e rapidez, para pessoas, profissionais e empresas.</p>
+          <p class="hero-lead">Você escolhe o que precisa. Nós cuidamos da tecnologia.</p>
+          <p class="sub">Aplicamos a tecnologia certa a cada necessidade e usamos IA em nossos processos para entregar sites, sistemas, aplicativos e automações com mais qualidade, desempenho e rapidez, para pessoas, profissionais e empresas.</p>
           <div class="hero-actions">
             <a href="#contato" class="btn btn-primary magnetic">Solicitar orçamento <svg class="ico"><use href="#i-arrow-right"/></svg></a>
           </div>
@@ -186,7 +185,7 @@
             <div class="eco-node n-app"><svg class="c3d-svg ic-mobile" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#c3d)"><rect x="17" y="3" width="38" height="66" rx="11" fill="url(#cRed)"/><rect x="21.5" y="8" width="29" height="56" rx="7" fill="url(#cPlate)"/><rect x="30" y="10.5" width="12" height="2.6" rx="1.3" fill="#FFF3EA" fill-opacity=".7"/></g><rect x="25" y="18" width="22" height="17" rx="5" fill="url(#cPeach)" fill-opacity=".9"/><rect x="28" y="22" width="11" height="3" rx="1.5" fill="url(#cRed)"/><rect x="28" y="27.5" width="16" height="2.4" rx="1.2" fill="#FFF3EA" fill-opacity=".7"/><rect x="23.5" y="47" width="25" height="13" rx="5" fill="#FFF3EA" fill-opacity=".14"/><rect class="app" style="--d:0.00s" x="24.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><rect class="app" style="--d:0.15s" x="30.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><rect class="app" style="--d:0.30s" x="36.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><rect class="app" style="--d:0.45s" x="42.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><circle class="badge" cx="52" cy="9" r="4.6" fill="url(#cPeach)"/></svg><span class="eco-label"><svg class="ico"><use href="#i-phone"/></svg>Aplicativos</span></div>
             <div class="eco-node n-sys"><svg class="c3d-svg ic-web" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#c3d)"><rect x="8" y="12" width="56" height="48" rx="12" fill="url(#cPlate)"/><path d="M8 24a12 12 0 0 1 12-12h32a12 12 0 0 1 12 12v0H8z" fill="url(#cRed)"/><circle cx="18" cy="18" r="2.4" fill="#FFF3EA"/><circle cx="26" cy="18" r="2.4" fill="#FFF3EA"/><circle cx="34" cy="18" r="2.4" fill="#FFF3EA"/></g><rect class="web-l" style="--d:0s" x="16" y="32" width="24" height="4" rx="2" fill="url(#cPeach)"/><rect class="web-l" style="--d:.5s" x="16" y="40" width="34" height="4" rx="2" fill="url(#cPeach)"/><rect class="web-l" style="--d:1s" x="24" y="48" width="22" height="4" rx="2" fill="url(#cPeach)"/><rect class="web-caret" x="50" y="46" width="2.2" height="8" rx="1" fill="#FFF3EA"/></svg><span class="eco-label"><svg class="ico"><use href="#i-layout"/></svg>Sistemas</span></div>
             <div class="eco-node n-ai"><svg class="c3d-svg ic-bot" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#c3d)"><rect x="34" y="7" width="4" height="9" rx="2" fill="url(#cPeach)"/><circle class="bot-led" cx="36" cy="6" r="4.2" fill="url(#cRed)"/><rect x="12" y="16" width="48" height="38" rx="15" fill="url(#cRed)"/><rect x="6" y="28" width="6" height="14" rx="3" fill="url(#cPeach)"/><rect x="60" y="28" width="6" height="14" rx="3" fill="url(#cPeach)"/><circle class="bot-eye" cx="27" cy="34" r="6.4" fill="#FFF3EA"/><circle class="bot-eye" cx="45" cy="34" r="6.4" fill="#FFF3EA"/><circle cx="25.2" cy="32" r="1.8" fill="#fff"/><circle cx="43.2" cy="32" r="1.8" fill="#fff"/><rect class="bot-mouth-flat" x="28" y="44" width="16" height="4.5" rx="2.25" fill="url(#cDark)"/><path class="bot-mouth-smile" d="M28 42.5q8 9 16 0" fill="none" stroke="url(#cDark)" stroke-width="4.2" stroke-linecap="round"/></g><g class="bot-chats"><rect class="bot-chat" style="--d:0s" x="46" y="2" width="16" height="10" rx="4" fill="url(#cPeach)"/><rect class="bot-chat" style="--d:.18s" x="52" y="13" width="14" height="9" rx="4" fill="url(#cPeach)"/><rect class="bot-chat" style="--d:.36s" x="8" y="2" width="16" height="10" rx="4" fill="url(#cPeach)"/></g></svg><span class="eco-label"><svg class="ico"><use href="#i-bot"/></svg>Automações e IA</span></div>
-            <div class="eco-core"><img src="img/logo-ariramba.jpg" alt="" width="56" height="56" /></div>
+            <div class="eco-core"><img src="img/logo-ariramba.webp" alt="" width="56" height="56" decoding="async" /></div>
             <div class="eco-floor" aria-hidden="true"></div>
           </div>
         </div>
@@ -458,6 +457,6 @@
 
   <button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg class="ico"><use href="#i-up"/></svg></button>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/main.min.js" defer></script>
 </body>
 </html>

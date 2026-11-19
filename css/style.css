@@ -1,3 +1,6 @@
+@font-face{font-family:"Raleway";font-style:normal;font-weight:600 900;font-display:swap;src:url(../fonts/raleway.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url(../fonts/plusjakarta.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400 500;font-display:swap;src:url(../fonts/jetbrainsmono.woff2) format("woff2")}
 :root {
   --bg: #18181b;
   --bg-2: #232327;
@@ -398,7 +401,7 @@ header.site.hidden { transform: translateY(-100%); }
 .tlogo.nologo .tinit { display: block; }
 .tcard h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
 .tcard p { color: var(--muted); font-size: .9rem; }
-.tcat { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c); }
+.tcat { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: color-mix(in srgb, var(--c) 60%, #fff); }
 @media (prefers-reduced-motion: reduce) { .tstrip { animation: none; } .tslider { overflow-x: auto; } }
 
 /* ---------- Contato ---------- */
