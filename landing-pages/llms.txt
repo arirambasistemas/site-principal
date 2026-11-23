@@ -1,0 +1,25 @@
+# Ariramba Sistemas: Landing Pages
+
+> A Ariramba Sistemas cria landing pages modernas e profissionais para pequenas e médias empresas, otimizadas para o Google (SEO), para IAs generativas (GEO) e, no plano Avançado, acessíveis a agentes de IA via MCP (Model Context Protocol). Entrega a partir de 5 dias úteis.
+
+## Planos (pagamento único, em reais)
+
+- Essencial (básico): R$ 1.497. Até 5 seções, copy a partir do briefing, SEO técnico, WhatsApp e GA4, meta de 90+ no PageSpeed. 5 dias úteis.
+- Profissional (intermediário): R$ 2.997. Até 8 seções, estratégia de conversão, design exclusivo, GEO completo (llms.txt, robôs de IA, respostas citáveis), schema completo, meta de 100 no PageSpeed, CRM/webhook, Pixel, GTM e LGPD. 7 dias úteis.
+- Avançado: R$ 5.997. Tudo do Profissional, mais servidor MCP para agentes de IA, 2 variações para teste A/B, plano de autoridade de 30 dias e 3 meses de medição de SEO e visibilidade em IAs. 12 dias úteis.
+- Extras: seção adicional R$ 197; rodada de ajustes R$ 247; servidor MCP avulso R$ 2.497; plano de cuidado mensal a partir de R$ 149/mês.
+
+## Processo
+
+1. Briefing e estratégia
+2. Copy aprovada pelo cliente
+3. Design aprovado pelo cliente
+4. Construção, SEO e GEO
+5. Publicação e medição
+
+## Links
+
+- [Landing page do serviço](https://arirambasistemas.com.br/landing-pages/)
+- [Planos e preços](https://arirambasistemas.com.br/landing-pages/#planos)
+- [Perguntas frequentes](https://arirambasistemas.com.br/landing-pages/#duvidas)
+- [Site principal da Ariramba Sistemas](https://arirambasistemas.com.br/)
