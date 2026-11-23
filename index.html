@@ -5,455 +5,316 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariramba Sistemas | Soluções tecnológicas para quem não pode perder tempo</title>
   <meta name="description" content="Sites, sistemas, aplicativos e automações com IA: a tecnologia certa para cada necessidade, com resultados práticos e em menos tempo para pessoas, profissionais e empresas." />
-  <link rel="preload" href="fonts/raleway.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="fonts/plusjakarta.woff2" as="font" type="font/woff2" crossorigin />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="preload" href="fonts/ubuntu-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/ubuntu-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="img/hero-waves.svg" as="image" />
   <link rel="icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="css/style.min.css" />
+  <script>document.documentElement.className="js"</script>
   <!-- OpenAI Pixel: só carrega depois do consentimento de cookies (LGPD) -->
   <script>window.loadOaiPixel=function(){!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"KHo486SdCyVBVsU5zs6wmc",debug:false});};try{if(localStorage.getItem("ariramba-cookies")==="aceito")window.loadOaiPixel();}catch(e){}</script>
 </head>
 <body>
-
-  <!-- Sprite de ícones (SVG inline, sem dependências externas) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-<linearGradient id="cRed" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F28B7E"/><stop offset=".5" stop-color="#E4574A"/><stop offset="1" stop-color="#6E2824"/></linearGradient>
-      <linearGradient id="cPeach" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFEBDC"/><stop offset=".55" stop-color="#F2B699"/><stop offset="1" stop-color="#C98A72"/></linearGradient>
-      <linearGradient id="cPlate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3a40"/><stop offset="1" stop-color="#17171a"/></linearGradient>
-      <linearGradient id="cDark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#26262a"/><stop offset="1" stop-color="#0c0c0e"/></linearGradient>
-      <filter id="c3d" x="-25%" y="-25%" width="150%" height="160%" color-interpolation-filters="sRGB">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="1.4" result="blur"/>
-        <feSpecularLighting in="blur" surfaceScale="3" specularConstant="1.05" specularExponent="24" lighting-color="#FFF3EA" result="spec"><fePointLight x="16" y="-12" z="70"/></feSpecularLighting>
-        <feComposite in="spec" in2="SourceAlpha" operator="in" result="specIn"/>
-        <feComposite in="SourceGraphic" in2="specIn" operator="arithmetic" k1="0" k2="1" k3=".55" k4="0" result="lit"/>
-        <feDropShadow in="lit" dx="0" dy="3" stdDeviation="2.2" flood-color="#000" flood-opacity=".55"/>
-      </filter>
-      
-      <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
-      <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="M12 15l-3-3a22 22 0 0 1 2-4A13 13 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2z"/><circle cx="16.5" cy="7.5" r="1.5"/></symbol>
-      <symbol id="i-bot" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="3"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1"/><circle cx="8.5" cy="14" r="1.3"/><circle cx="15.5" cy="14" r="1.3"/><path d="M9 17.5h6"/><path d="M1 13v3M23 13v3"/></symbol>
-      <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M10 4a2 2 0 1 1 4 0v2h4a1 1 0 0 1 1 1v4h-2a2 2 0 1 0 0 4h2v4a1 1 0 0 1-1 1h-4v-2a2 2 0 1 0-4 0v2H6a1 1 0 0 1-1-1v-4h2a2 2 0 1 0 0-4H5V7a1 1 0 0 1 1-1h4z"/></symbol>
-      <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></symbol>
-      <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></symbol>
-      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9z"/></symbol>
-      <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></symbol>
-      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
-      <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></symbol>
-      <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
-      <symbol id="i-check-badge" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></symbol>
-      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/></symbol>
-      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-      <symbol id="i-trend" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
-      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
-      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
-      <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
-      <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 5v14c0 1.7-4 3-9 3s-9-1.3-9-3V5"/><path d="M21 12c0 1.7-4 3-9 3s-9-1.3-9-3"/></symbol>
-      <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></symbol>
-      <symbol id="i-workflow" viewBox="0 0 24 24"><rect x="2" y="2" width="7" height="7" rx="2"/><rect x="15" y="15" width="7" height="7" rx="2"/><path d="M9 5.5h3a3 3 0 0 1 3 3v7a3 3 0 0 0 3 3"/></symbol>
-      <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
-      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></symbol>
-      <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
-      <symbol id="s-landing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3.5" width="19" height="14" rx="2.5"/><path d="M2.5 8h19"/><circle cx="5" cy="5.75" r=".6" fill="currentColor" stroke="none"/><circle cx="7.2" cy="5.75" r=".6" fill="currentColor" stroke="none"/><rect x="5.5" y="10.5" width="8" height="3" rx="1" fill="currentColor" fill-opacity=".3" stroke="none"/><path d="M10 17.5v3M7 21h6"/><path d="M15.5 12.5l4.7 2.3-2.1.8-.8 2.1z" fill="currentColor" fill-opacity=".45"/></symbol>
-      <symbol id="s-bot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7.5" width="16" height="12" rx="3.5"/><path d="M12 7.5V4.5"/><circle cx="12" cy="3.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="9" cy="13" r="1.4" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r="1.4" fill="currentColor" stroke="none"/><path d="M9.5 16.5c1.5 1 3.5 1 5 0"/><path d="M1.5 11.5v3M22.5 11.5v3"/><path d="M4 19.5v1.5l2-1.5M20 19.5v1.5l-2-1.5" fill="none"/></symbol>
-      <symbol id="s-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3.5" width="19" height="17" rx="3"/><path d="M2.5 8.5h19"/><circle cx="5.2" cy="6" r=".6" fill="currentColor" stroke="none"/><circle cx="7.4" cy="6" r=".6" fill="currentColor" stroke="none"/><path d="M9.5 12.5l-2.5 2.5 2.5 2.5M14.5 12.5l2.5 2.5-2.5 2.5"/><path d="M13 11.5l-2 6" stroke-opacity=".5"/></symbol>
-      <symbol id="s-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.8"/><path d="M10.5 18.5h3"/><rect x="8.8" y="6" width="3" height="3" rx=".9" fill="currentColor" fill-opacity=".45" stroke="none"/><rect x="12.2" y="6" width="3" height="3" rx=".9" fill="currentColor" stroke="none"/><rect x="8.8" y="10.5" width="3" height="3" rx=".9" fill="currentColor" stroke="none"/><rect x="12.2" y="10.5" width="3" height="3" rx=".9" fill="currentColor" fill-opacity=".45" stroke="none"/></symbol>
-      <symbol id="s-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.8 18.5h10.4a4.2 4.2 0 0 0 .5-8.4 6 6 0 0 0-11.5 1.6A3.5 3.5 0 0 0 6.8 18.5z"/><rect x="9" y="11" width="6" height="2.4" rx=".8" fill="currentColor" fill-opacity=".35" stroke="none"/><rect x="9" y="14.2" width="6" height="2.4" rx=".8" fill="currentColor" stroke="none"/></symbol>
-      <symbol id="s-consult" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8a6.4 6.4 0 0 0-3.8 11.6c.6.5 1 1.2 1 2v.6h5.6v-.6c0-.8.4-1.5 1-2A6.4 6.4 0 0 0 12 2.8z"/><path d="M9.3 20.6h5.4M10.5 23h3"/><path d="M9.2 12.2l1.9-1.9 1.5 1.5 2.2-2.2" stroke-opacity=".7"/><path d="M14.1 9.6h1.6v1.6" stroke-opacity=".7"/></symbol>
-<linearGradient id="gNavyTop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f3f6b"/><stop offset="1" stop-color="#0f2748"/></linearGradient>
-      <linearGradient id="gNavyLeft" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16315a"/><stop offset="1" stop-color="#0b1d3a"/></linearGradient>
-      <linearGradient id="gNavyRight" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f2547"/><stop offset="1" stop-color="#071428"/></linearGradient>
-      <linearGradient id="gTop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b7fa0"/><stop offset="1" stop-color="#3a4a62"/></linearGradient>
-      <linearGradient id="gLeft" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34425a"/><stop offset="1" stop-color="#1d2639"/></linearGradient>
-      <linearGradient id="gRight" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2332"/><stop offset="1" stop-color="#0e131d"/></linearGradient>
-      <filter id="fGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      <filter id="fShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
-      <symbol id="s3-landing" viewBox="-60.6 -33.0 136.7 111.0"><ellipse cx="7.79" cy="38.00" rx="41.60" ry="10.00" fill="#000" fill-opacity=".55" filter="url(#fShadow)"/><polygon points="70.15,40.50 15.59,72.00 15.59,65.70 70.15,34.20" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-54.56,31.50 15.59,72.00 15.59,65.70 -54.56,25.20" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="0.00,-6.30 70.15,34.20 15.59,65.70 -54.56,25.20" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="49.88,35.10 45.99,37.35 45.99,4.95 49.88,2.70" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-5.46,7.65 45.99,37.35 45.99,4.95 -5.46,-24.75" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-1.56,-27.00 49.88,2.70 45.99,4.95 -5.46,-24.75" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><line x1="-2.34" y1="-4.05" x2="42.87" y2="22.05" stroke="#74e0ff" stroke-width="1.9" stroke-linecap="round" filter="url(#fGlow)"/><line x1="-2.34" y1="-14.85" x2="24.16" y2="0.45" stroke="#74e0ff" stroke-width="1.9" stroke-linecap="round" filter="url(#fGlow)"/><circle cx="39.75" cy="3.15" r="1.20" fill="#9aeeff" filter="url(#fGlow)"/></symbol>
-      <symbol id="s3-bot" viewBox="-52.8 -36.6 105.5 103.8"><ellipse cx="0.00" cy="33.50" rx="36.40" ry="10.00" fill="#000" fill-opacity=".55" filter="url(#fShadow)"/><polygon points="46.77,34.20 0.00,61.20 0.00,23.40 46.77,-3.60" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-46.77,34.20 0.00,61.20 0.00,23.40 -46.77,-3.60" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="0.00,-30.60 46.77,-3.60 0.00,23.40 -46.77,-3.60" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="7.79,-4.50 0.00,0.00 0.00,-14.40 7.79,-18.90" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-7.79,-4.50 0.00,0.00 0.00,-14.40 -7.79,-18.90" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="0.00,-23.40 7.79,-18.90 0.00,-14.40 -7.79,-18.90" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><circle cx="0.00" cy="-22.50" r="1.50" fill="#9aeeff" filter="url(#fGlow)"/><circle cx="-34.29" cy="18.00" r="1.20" fill="#9aeeff" filter="url(#fGlow)"/><circle cx="-12.47" cy="30.60" r="1.20" fill="#9aeeff" filter="url(#fGlow)"/><line x1="-35.85" y1="26.10" x2="-9.35" y2="41.40" stroke="#74e0ff" stroke-width="1.9" stroke-linecap="round" filter="url(#fGlow)"/></symbol>
-      <symbol id="s3-web" viewBox="-52.8 -56.4 121.1 125.4"><ellipse cx="7.79" cy="33.50" rx="36.40" ry="10.00" fill="#000" fill-opacity=".55" filter="url(#fShadow)"/><polygon points="62.35,36.00 15.59,63.00 15.59,57.60 62.35,30.60" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-46.77,27.00 15.59,63.00 15.59,57.60 -46.77,21.60" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="0.00,-5.40 62.35,30.60 15.59,57.60 -46.77,21.60" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="62.35,30.60 57.68,33.30 57.68,-11.70 62.35,-14.40" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-4.68,-2.70 57.68,33.30 57.68,-11.70 -4.68,-47.70" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="0.00,-50.40 62.35,-14.40 57.68,-11.70 -4.68,-47.70" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><line x1="2.34" y1="-32.85" x2="35.07" y2="-13.95" stroke="#74e0ff" stroke-width="1.9" stroke-linecap="round" filter="url(#fGlow)"/><line x1="2.34" y1="-23.85" x2="28.06" y2="-9.00" stroke="#74e0ff" stroke-width="1.9" stroke-linecap="round" filter="url(#fGlow)"/><line x1="2.34" y1="-14.85" x2="21.04" y2="-4.05" stroke="#74e0ff" stroke-width="1.9" stroke-linecap="round" filter="url(#fGlow)"/><circle cx="44.43" cy="-9.45" r="1.10" fill="#9aeeff" filter="url(#fGlow)"/></symbol>
-      <symbol id="s3-mobile" viewBox="-41.9 -66.3 86.8 127.2"><ellipse cx="-7.79" cy="29.00" rx="31.20" ry="10.00" fill="#000" fill-opacity=".55" filter="url(#fShadow)"/><polygon points="38.97,31.50 -1.56,54.90 -1.56,-17.10 38.97,-40.50" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-35.85,35.10 -1.56,54.90 -1.56,-17.10 -35.85,-36.90" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="4.68,-60.30 38.97,-40.50 -1.56,-17.10 -35.85,-36.90" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><line x1="4.68" y1="-54.90" x2="29.62" y2="-40.50" stroke="#74e0ff" stroke-width="1.9" stroke-linecap="round" filter="url(#fGlow)"/><circle cx="-2.34" cy="-49.95" r="0.90" fill="#9aeeff" filter="url(#fGlow)"/><circle cx="-13.25" cy="-43.65" r="0.90" fill="#9aeeff" filter="url(#fGlow)"/><circle cx="12.47" cy="-41.40" r="0.90" fill="#9aeeff" filter="url(#fGlow)"/><circle cx="1.56" cy="-35.10" r="0.90" fill="#9aeeff" filter="url(#fGlow)"/></symbol>
-      <symbol id="s3-cloud" viewBox="-37.2 -29.4 108.6 91.2"><ellipse cx="3.90" cy="40.25" rx="44.20" ry="10.00" fill="#000" fill-opacity=".55" filter="url(#fShadow)"/><polygon points="31.18,18.00 0.00,36.00 0.00,14.40 31.18,-3.60" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-31.18,18.00 0.00,36.00 0.00,14.40 -31.18,-3.60" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="0.00,-21.60 31.18,-3.60 0.00,14.40 -31.18,-3.60" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="65.47,37.80 34.29,55.80 34.29,34.20 65.47,16.20" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="3.12,37.80 34.29,55.80 34.29,34.20 3.12,16.20" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="34.29,-1.80 65.47,16.20 34.29,34.20 3.12,16.20" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="31.18,16.20 0.00,34.20 0.00,12.60 31.18,-5.40" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-31.18,16.20 0.00,34.20 0.00,12.60 -31.18,-5.40" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="0.00,-23.40 31.18,-5.40 0.00,12.60 -31.18,-5.40" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><line x1="-18.71" y1="-3.60" x2="18.71" y2="-3.60" stroke="#74e0ff" stroke-width="1.9" stroke-linecap="round" filter="url(#fGlow)"/><circle cx="32.74" cy="15.30" r="1.10" fill="#9aeeff" filter="url(#fGlow)"/><circle cx="-15.59" cy="3.60" r="1.10" fill="#9aeeff" filter="url(#fGlow)"/></symbol>
-      <symbol id="s3-consult" viewBox="-23.1 -37.5 91.5 89.4"><ellipse cx="19.49" cy="26.75" rx="28.60" ry="10.00" fill="#000" fill-opacity=".55" filter="url(#fShadow)"/><polygon points="17.15,9.90 0.00,19.80 0.00,0.00 17.15,-9.90" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-17.15,9.90 0.00,19.80 0.00,0.00 -17.15,-9.90" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="0.00,-19.80 17.15,-9.90 0.00,0.00 -17.15,-9.90" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="39.75,22.95 22.60,32.85 22.60,-4.95 39.75,-14.85" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="5.46,22.95 22.60,32.85 22.60,-4.95 5.46,-14.85" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="22.60,-24.75 39.75,-14.85 22.60,-4.95 5.46,-14.85" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="62.35,36.00 45.21,45.90 45.21,-11.70 62.35,-21.60" fill="url(#gRight)" stroke="rgba(116,185,255,.18)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="28.06,36.00 45.21,45.90 45.21,-11.70 28.06,-21.60" fill="url(#gLeft)" stroke="rgba(116,185,255,.22)" stroke-width="0.5" stroke-linejoin="round" /><polygon points="45.21,-31.50 62.35,-21.60 45.21,-11.70 28.06,-21.60" fill="url(#gTop)" stroke="rgba(170,215,255,.45)" stroke-width="0.5" stroke-linejoin="round" /><line x1="0.00" y1="-14.40" x2="45.99" y2="-27.45" stroke="#74e0ff" stroke-width="1.9" stroke-linecap="round" filter="url(#fGlow)"/><circle cx="45.99" cy="-27.45" r="1.40" fill="#9aeeff" filter="url(#fGlow)"/></symbol>
-      <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
-      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-      <symbol id="i-arrow-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
-      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
-      <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></symbol>
-      <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></symbol>
-      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
-      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
-      <symbol id="i-up" viewBox="0 0 24 24"><path d="M5 4h14M12 20V9M7 13.5l5-5 5 5"/></symbol>
-      <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></symbol>
-      <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="3"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M2 13h20"/></symbol>
-      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/><path d="M16 4a4 4 0 0 1 0 8M22 21v-1a6 6 0 0 0-4-5.7"/></symbol>
-      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
-      <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M12 14l4-4"/><path d="M3.3 17a9 9 0 1 1 17.4 0"/></symbol>
-      <symbol id="i-brand-wa" viewBox="0 0 24 24"><path d="M3 21l1.6-4.6A9 9 0 1 1 8 19.6z"/><path d="M9 10c0 2.8 2.2 5 5 5l1-1.2-2-1-1 1c-1-.5-1.8-1.3-2.3-2.3l1-1-1-2-1.2 1z"/></symbol>
-      <symbol id="i-brand-in" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13c0-1.5 1-2 2-2s2 .7 2 2v4"/></symbol>
-      <symbol id="i-brand-gh" viewBox="0 0 24 24"><path d="M9 19c-4 1.2-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.7 11.7 0 0 0-6 0C6.8 2.3 5.8 2.6 5.8 2.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.4 9c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
-      <symbol id="i-brand-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></symbol>
-    </defs>
-  </svg>
-
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="glow a" aria-hidden="true"></div>
-  <div class="glow b" aria-hidden="true"></div>
-  <div class="read-progress" id="readProgress" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+<symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16.2h5"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/></symbol>
+<symbol id="i-sheet" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M4 9h16M10 9v11.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0V8ZM12 17v4"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></symbol>
+</defs></svg>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
   <header class="site" id="siteHeader">
     <div class="container nav">
       <a href="#inicio" class="brand" aria-label="Ariramba Sistemas - início">
-        <img src="img/logo-ariramba.webp" alt="" width="38" height="38" decoding="async" />
-        Ariramba
+        <img src="img/logo-ariramba.webp" alt="" width="40" height="40" /> <span>Ariramba</span>
       </a>
-      <nav aria-label="Principal">
-        <ul class="menu" id="menu">
-          <li class="pill-ind" id="pillInd" aria-hidden="true"></li>
-          <li><a href="#inicio" data-spy="inicio"><svg class="ico"><use href="#i-home"/></svg>Início</a></li>
-          <li><a href="#servicos" data-spy="servicos"><svg class="ico"><use href="#i-layout"/></svg>Serviços</a></li>
-          <li><a href="#processo" data-spy="processo"><svg class="ico"><use href="#i-workflow"/></svg>Processo</a></li>
-          <li><a href="#sobre" data-spy="sobre"><svg class="ico"><use href="#i-users"/></svg>Sobre</a></li>
-          <li><a href="#tecnologias" data-spy="tecnologias"><svg class="ico"><use href="#i-cpu"/></svg>Tecnologias</a></li>
-          <li><a href="#contato" data-spy="contato"><svg class="ico"><use href="#i-message"/></svg>Contato</a></li>
-        </ul>
-      </nav>
-      <div style="display:flex;gap:10px;align-items:center">
-        <a href="#contato" class="btn btn-primary magnetic">Fale com a gente <svg class="ico"><use href="#i-arrow-right"/></svg></a>
-        <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
-          <svg class="ico ico-menu"><use href="#i-menu"/></svg>
-          <svg class="ico ico-x"><use href="#i-x"/></svg>
-        </button>
-      </div>
+      <nav aria-label="Principal"><ul class="menu"><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#portfolio">Portfólio</a></li><li><a href="#processo">Processo</a></li><li><a href="#tecnologias">Tecnologias</a></li><li><a href="#contato">Contato</a></li></ul></nav>
+      <a href="#contato" class="btn btn-dark nav-cta">Fale com a gente</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu"><i></i><i></i><i></i></button>
     </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a href="#processo">Processo</a><a href="#tecnologias">Tecnologias</a><a href="#contato">Contato</a></nav>
   </header>
 
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-    <a href="#inicio"><svg class="ico"><use href="#i-home"/></svg>Início</a>
-    <a href="#servicos"><svg class="ico"><use href="#i-layout"/></svg>Serviços</a>
-    <a href="#processo"><svg class="ico"><use href="#i-workflow"/></svg>Processo</a>
-    <a href="#sobre"><svg class="ico"><use href="#i-users"/></svg>Sobre</a>
-    <a href="#tecnologias"><svg class="ico"><use href="#i-cpu"/></svg>Tecnologias</a>
-    <a href="#contato"><svg class="ico"><use href="#i-message"/></svg>Contato</a>
-  </nav>
+  <main id="conteudo">
 
-  <main>
-
-    <!-- HERO -->
     <section class="hero" id="inicio">
       <div class="container hero-grid">
-        <div>
-          <h1 class="display" id="heroTitle">Extraia o máximo da tecnologia <span class="grad-text">a seu favor.</span></h1>
-          <p class="hero-lead">Você escolhe o que precisa. Nós cuidamos da tecnologia.</p>
+        <div class="hero-copy">
+          <h1>Extraia o máximo da tecnologia <span>a seu favor.</span></h1>
+          <p class="lead">Você escolhe o que precisa. Nós cuidamos da tecnologia.</p>
           <p class="sub">Aplicamos a tecnologia certa a cada necessidade e usamos IA em nossos processos para entregar sites, sistemas, aplicativos e automações com mais qualidade, desempenho e rapidez, para pessoas, profissionais e empresas.</p>
-          <div class="hero-actions">
-            <a href="#contato" class="btn btn-primary magnetic">Solicitar orçamento <svg class="ico"><use href="#i-arrow-right"/></svg></a>
-          </div>
-          <div class="hero-meta">
-            <div><svg class="ico"><use href="#i-zap"/></svg><span class="t">Diagnóstico em</span><b class="t">24h a 48h</b></div>
-            <div><svg class="ico"><use href="#i-layout"/></svg><span class="t">Entrega com</span><b class="t">apoio de IA</b></div>
-            <div><svg class="ico"><use href="#i-puzzle"/></svg><span class="t">Serviços contratados</span><b class="t">separadamente</b></div>
+          <div class="actions">
+            <a href="#contato" class="btn btn-dark">Solicitar orçamento</a>
+            <a href="#servicos" class="btn btn-primary">Conhecer serviços</a>
           </div>
         </div>
-
-        <div class="flow-card eco" id="flowCard" aria-label="Ecossistema digital Ariramba: site, aplicativo, sistema e automação com IA">
-          <div class="eco-stage">
-            <svg class="eco-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <path class="flow-line" d="M35 24 C44 24 41 50 50 50"/><path class="flow-line" d="M65 24 C56 24 59 50 50 50"/>
-              <path class="flow-line" d="M35 76 C44 76 41 50 50 50"/><path class="flow-line" d="M65 76 C56 76 59 50 50 50"/>
-            </svg>
-            <div class="eco-node n-site"><svg class="c3d-svg lp-svg" viewBox="0 0 72 72" aria-hidden="true">
-                <defs><clipPath id="lpClipHero"><rect x="10" y="20" width="46" height="40" rx="6"/></clipPath></defs>
-                <g filter="url(#c3d)">
-                  <rect x="6" y="8" width="60" height="56" rx="16" fill="url(#cPlate)"/>
-                  <rect x="6" y="8" width="60" height="12" rx="6" fill="url(#cRed)"/>
-                  <circle cx="13" cy="14" r="2" fill="#FFF3EA"/><circle cx="20" cy="14" r="2" fill="#FFF3EA"/><circle cx="27" cy="14" r="2" fill="#FFF3EA"/>
-                </g>
-                <g clip-path="url(#lpClipHero)">
-                  <g class="lp-content">
-                    <rect x="10" y="22" width="46" height="16" rx="5" fill="url(#cRed)"/>
-                    <rect x="15" y="27" width="18" height="3.5" rx="1.75" fill="#FFF3EA"/>
-                    <rect x="15" y="32" width="10" height="3" rx="1.5" fill="url(#cDark)"/>
-                    <rect x="10" y="42" width="14" height="12" rx="3" fill="url(#cPeach)"/>
-                    <rect x="28" y="42" width="14" height="12" rx="3" fill="url(#cPeach)"/>
-                    <rect x="46" y="42" width="10" height="12" rx="3" fill="url(#cPeach)"/>
-                    <rect x="15" y="58" width="36" height="3" rx="1.5" fill="#FFF3EA" fill-opacity=".6"/>
-                    <rect x="15" y="64" width="26" height="3" rx="1.5" fill="#FFF3EA" fill-opacity=".4"/>
-                    <rect x="10" y="72" width="46" height="14" rx="4" fill="url(#cRed)"/>
-                    <rect x="16" y="78" width="34" height="3.5" rx="1.75" fill="#FFF3EA"/>
-                  </g>
-                </g>
-                <rect x="61" y="22" width="2.6" height="36" rx="1.3" fill="#F2B699" fill-opacity=".3"/>
-                <rect class="lp-thumb" x="60.7" y="22" width="3.2" height="12" rx="1.6" fill="url(#cPeach)"/>
-              </svg><span class="eco-label"><svg class="ico"><use href="#i-globe"/></svg>Sites</span></div>
-            <div class="eco-node n-app"><svg class="c3d-svg ic-mobile" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#c3d)"><rect x="17" y="3" width="38" height="66" rx="11" fill="url(#cRed)"/><rect x="21.5" y="8" width="29" height="56" rx="7" fill="url(#cPlate)"/><rect x="30" y="10.5" width="12" height="2.6" rx="1.3" fill="#FFF3EA" fill-opacity=".7"/></g><rect x="25" y="18" width="22" height="17" rx="5" fill="url(#cPeach)" fill-opacity=".9"/><rect x="28" y="22" width="11" height="3" rx="1.5" fill="url(#cRed)"/><rect x="28" y="27.5" width="16" height="2.4" rx="1.2" fill="#FFF3EA" fill-opacity=".7"/><rect x="23.5" y="47" width="25" height="13" rx="5" fill="#FFF3EA" fill-opacity=".14"/><rect class="app" style="--d:0.00s" x="24.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><rect class="app" style="--d:0.15s" x="30.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><rect class="app" style="--d:0.30s" x="36.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><rect class="app" style="--d:0.45s" x="42.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><circle class="badge" cx="52" cy="9" r="4.6" fill="url(#cPeach)"/></svg><span class="eco-label"><svg class="ico"><use href="#i-phone"/></svg>Aplicativos</span></div>
-            <div class="eco-node n-sys"><svg class="c3d-svg ic-web" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#c3d)"><rect x="8" y="12" width="56" height="48" rx="12" fill="url(#cPlate)"/><path d="M8 24a12 12 0 0 1 12-12h32a12 12 0 0 1 12 12v0H8z" fill="url(#cRed)"/><circle cx="18" cy="18" r="2.4" fill="#FFF3EA"/><circle cx="26" cy="18" r="2.4" fill="#FFF3EA"/><circle cx="34" cy="18" r="2.4" fill="#FFF3EA"/></g><rect class="web-l" style="--d:0s" x="16" y="32" width="24" height="4" rx="2" fill="url(#cPeach)"/><rect class="web-l" style="--d:.5s" x="16" y="40" width="34" height="4" rx="2" fill="url(#cPeach)"/><rect class="web-l" style="--d:1s" x="24" y="48" width="22" height="4" rx="2" fill="url(#cPeach)"/><rect class="web-caret" x="50" y="46" width="2.2" height="8" rx="1" fill="#FFF3EA"/></svg><span class="eco-label"><svg class="ico"><use href="#i-layout"/></svg>Sistemas</span></div>
-            <div class="eco-node n-ai"><svg class="c3d-svg ic-bot" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#c3d)"><rect x="34" y="7" width="4" height="9" rx="2" fill="url(#cPeach)"/><circle class="bot-led" cx="36" cy="6" r="4.2" fill="url(#cRed)"/><rect x="12" y="16" width="48" height="38" rx="15" fill="url(#cRed)"/><rect x="6" y="28" width="6" height="14" rx="3" fill="url(#cPeach)"/><rect x="60" y="28" width="6" height="14" rx="3" fill="url(#cPeach)"/><circle class="bot-eye" cx="27" cy="34" r="6.4" fill="#FFF3EA"/><circle class="bot-eye" cx="45" cy="34" r="6.4" fill="#FFF3EA"/><circle cx="25.2" cy="32" r="1.8" fill="#fff"/><circle cx="43.2" cy="32" r="1.8" fill="#fff"/><rect class="bot-mouth-flat" x="28" y="44" width="16" height="4.5" rx="2.25" fill="url(#cDark)"/><path class="bot-mouth-smile" d="M28 42.5q8 9 16 0" fill="none" stroke="url(#cDark)" stroke-width="4.2" stroke-linecap="round"/></g><g class="bot-chats"><rect class="bot-chat" style="--d:0s" x="46" y="2" width="16" height="10" rx="4" fill="url(#cPeach)"/><rect class="bot-chat" style="--d:.18s" x="52" y="13" width="14" height="9" rx="4" fill="url(#cPeach)"/><rect class="bot-chat" style="--d:.36s" x="8" y="2" width="16" height="10" rx="4" fill="url(#cPeach)"/></g></svg><span class="eco-label"><svg class="ico"><use href="#i-bot"/></svg>Automações e IA</span></div>
-            <div class="eco-core"><img src="img/logo-ariramba.webp" alt="" width="56" height="56" decoding="async" /></div>
-            <div class="eco-floor" aria-hidden="true"></div>
-          </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb"></div>
+          <span class="fl f1"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>Sites</span>
+          <span class="fl f2"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Aplicativos</span>
+          <span class="fl f3"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg>Sistemas</span>
+          <span class="fl f4"><svg class="ico" aria-hidden="true"><use href="#i-bot"/></svg>Automações e IA</span>
         </div>
       </div>
     </section>
 
-    <!-- SERVIÇOS -->
-    <section id="servicos">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="h2 svc-title">A solução certa para cada necessidade.</h2>
-          <p class="sub svc-sub">Do site simples ao sistema completo, usamos a tecnologia certa para o seu objetivo, com resultado prático e em tempo reduzido.</p>
-        </div>
-
-        <div class="cards">
-          <article class="sc reveal sc--bot" style="--d:0ms">
-            <div class="sc-stripe"></div>
-            <div class="sc-body">
-              <div class="sc-head">
-                <div class="sc-icon"><svg class="c3d-svg ic-bot" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#c3d)"><rect x="34" y="7" width="4" height="9" rx="2" fill="url(#cPeach)"/><circle class="bot-led" cx="36" cy="6" r="4.2" fill="url(#cRed)"/><rect x="12" y="16" width="48" height="38" rx="15" fill="url(#cRed)"/><rect x="6" y="28" width="6" height="14" rx="3" fill="url(#cPeach)"/><rect x="60" y="28" width="6" height="14" rx="3" fill="url(#cPeach)"/><circle class="bot-eye" cx="27" cy="34" r="6.4" fill="#FFF3EA"/><circle class="bot-eye" cx="45" cy="34" r="6.4" fill="#FFF3EA"/><circle cx="25.2" cy="32" r="1.8" fill="#fff"/><circle cx="43.2" cy="32" r="1.8" fill="#fff"/><rect class="bot-mouth-flat" x="28" y="44" width="16" height="4.5" rx="2.25" fill="url(#cDark)"/><path class="bot-mouth-smile" d="M28 42.5q8 9 16 0" fill="none" stroke="url(#cDark)" stroke-width="4.2" stroke-linecap="round"/></g><g class="bot-chats"><rect class="bot-chat" style="--d:0s" x="46" y="2" width="16" height="10" rx="4" fill="url(#cPeach)"/><rect class="bot-chat" style="--d:.18s" x="52" y="13" width="14" height="9" rx="4" fill="url(#cPeach)"/><rect class="bot-chat" style="--d:.36s" x="8" y="2" width="16" height="10" rx="4" fill="url(#cPeach)"/></g></svg></div>
-                <div class="sc-headtxt"><span class="sc-badge"><svg class="ico"><use href="#i-zap"/></svg>Automações e IA</span><h3>Automatize sua rotina com <span class="grad-text">Inteligência Artificial.</span></h3></div>
-              </div>
-              <p>Automatizamos o WhatsApp, integramos suas ferramentas e criamos fluxos que eliminam tarefas manuais, com resultado visível desde as primeiras semanas.</p>
-              <div class="sc-tags"><span class="sc-tag"><svg class="ico"><use href="#i-bot"/></svg>Agentes de IA</span><span class="sc-tag"><svg class="ico"><use href="#i-brand-wa"/></svg>WhatsApp</span><span class="sc-tag"><svg class="ico"><use href="#i-workflow"/></svg>Integrações</span></div>
-              <ul class="sc-benefits"><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Menos tarefas manuais</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Respostas mais rápidas</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Mais tempo para crescer</span></li></ul>
-              <a href="#contato" class="sc-cta">Conhecer automações <svg class="ico"><use href="#i-arrow-right"/></svg></a>
-            </div>
-          </article>
-          <article class="sc reveal sc--web" style="--d:80ms">
-            <div class="sc-stripe"></div>
-            <div class="sc-body">
-              <div class="sc-head">
-                <div class="sc-icon"><svg class="c3d-svg ic-web" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#c3d)"><rect x="8" y="12" width="56" height="48" rx="12" fill="url(#cPlate)"/><path d="M8 24a12 12 0 0 1 12-12h32a12 12 0 0 1 12 12v0H8z" fill="url(#cRed)"/><circle cx="18" cy="18" r="2.4" fill="#FFF3EA"/><circle cx="26" cy="18" r="2.4" fill="#FFF3EA"/><circle cx="34" cy="18" r="2.4" fill="#FFF3EA"/></g><rect class="web-l" style="--d:0s" x="16" y="32" width="24" height="4" rx="2" fill="url(#cPeach)"/><rect class="web-l" style="--d:.5s" x="16" y="40" width="34" height="4" rx="2" fill="url(#cPeach)"/><rect class="web-l" style="--d:1s" x="24" y="48" width="22" height="4" rx="2" fill="url(#cPeach)"/><rect class="web-caret" x="50" y="46" width="2.2" height="8" rx="1" fill="#FFF3EA"/></svg></div>
-                <div class="sc-headtxt"><span class="sc-badge"><svg class="ico"><use href="#i-zap"/></svg>Sistemas web</span><h3>Um sistema feito <span class="grad-text">para o seu processo.</span></h3></div>
-              </div>
-              <p>Sistemas de gestão, painéis e portais de clientes ajustados ao seu processo. Também modernizamos sistemas antigos para que acompanhem o seu crescimento.</p>
-              <div class="sc-tags"><span class="sc-tag"><svg class="ico"><use href="#i-layout"/></svg>Gestão</span><span class="sc-tag"><svg class="ico"><use href="#i-users"/></svg>Portais</span><span class="sc-tag"><svg class="ico"><use href="#i-code"/></svg>APIs</span></div>
-              <ul class="sc-benefits"><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Tudo em um só lugar</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Dados sempre atualizados</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Processos mais organizados</span></li></ul>
-              <a href="#contato" class="sc-cta">Conhecer sistemas <svg class="ico"><use href="#i-arrow-right"/></svg></a>
-            </div>
-          </article>
-          <article class="sc reveal sc--landing" style="--d:160ms">
-            <div class="sc-stripe"></div>
-            <div class="sc-body">
-              <div class="sc-head">
-                <div class="sc-icon"><svg class="c3d-svg lp-svg" viewBox="0 0 72 72" aria-hidden="true">
-                <defs><clipPath id="lpClip"><rect x="10" y="20" width="46" height="40" rx="6"/></clipPath></defs>
-                <g filter="url(#c3d)">
-                  <rect x="6" y="8" width="60" height="56" rx="16" fill="url(#cPlate)"/>
-                  <rect x="6" y="8" width="60" height="12" rx="6" fill="url(#cRed)"/>
-                  <circle cx="13" cy="14" r="2" fill="#FFF3EA"/><circle cx="20" cy="14" r="2" fill="#FFF3EA"/><circle cx="27" cy="14" r="2" fill="#FFF3EA"/>
-                </g>
-                <g clip-path="url(#lpClip)">
-                  <g class="lp-content">
-                    <rect x="10" y="22" width="46" height="16" rx="5" fill="url(#cRed)"/>
-                    <rect x="15" y="27" width="18" height="3.5" rx="1.75" fill="#FFF3EA"/>
-                    <rect x="15" y="32" width="10" height="3" rx="1.5" fill="url(#cDark)"/>
-                    <rect x="10" y="42" width="14" height="12" rx="3" fill="url(#cPeach)"/>
-                    <rect x="28" y="42" width="14" height="12" rx="3" fill="url(#cPeach)"/>
-                    <rect x="46" y="42" width="10" height="12" rx="3" fill="url(#cPeach)"/>
-                    <rect x="15" y="58" width="36" height="3" rx="1.5" fill="#FFF3EA" fill-opacity=".6"/>
-                    <rect x="15" y="64" width="26" height="3" rx="1.5" fill="#FFF3EA" fill-opacity=".4"/>
-                    <rect x="10" y="72" width="46" height="14" rx="4" fill="url(#cRed)"/>
-                    <rect x="16" y="78" width="34" height="3.5" rx="1.75" fill="#FFF3EA"/>
-                  </g>
-                </g>
-                <rect x="61" y="22" width="2.6" height="36" rx="1.3" fill="#F2B699" fill-opacity=".3"/>
-                <rect class="lp-thumb" x="60.7" y="22" width="3.2" height="12" rx="1.6" fill="url(#cPeach)"/>
-              </svg></div>
-                <div class="sc-headtxt"><span class="sc-badge"><svg class="ico"><use href="#i-zap"/></svg>Sites e landing pages</span><h3>Sua presença digital, <span class="grad-text">rápida e profissional.</span></h3></div>
-              </div>
-              <p>Sites pessoais, institucionais, portfólios e páginas de vendas feitos para apresentar bem você ou o seu negócio.</p>
-              <div class="sc-tags"><span class="sc-tag"><svg class="ico"><use href="#i-globe"/></svg>Sites</span><span class="sc-tag"><svg class="ico"><use href="#i-search"/></svg>SEO</span><span class="sc-tag"><svg class="ico"><use href="#i-rocket"/></svg>Landing pages</span></div>
-              <ul class="sc-benefits"><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Carregamento rápido</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Fácil de encontrar no Google</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Pronto para gerar contatos</span></li></ul>
-              <a href="#contato" class="sc-cta">Conhecer sites <svg class="ico"><use href="#i-arrow-right"/></svg></a>
-            </div>
-          </article>
-          <article class="sc reveal sc--mobile" style="--d:0ms">
-            <div class="sc-stripe"></div>
-            <div class="sc-body">
-              <div class="sc-head">
-                <div class="sc-icon"><svg class="c3d-svg ic-mobile" viewBox="0 0 72 72" aria-hidden="true"><g filter="url(#c3d)"><rect x="17" y="3" width="38" height="66" rx="11" fill="url(#cRed)"/><rect x="21.5" y="8" width="29" height="56" rx="7" fill="url(#cPlate)"/><rect x="30" y="10.5" width="12" height="2.6" rx="1.3" fill="#FFF3EA" fill-opacity=".7"/></g><rect x="25" y="18" width="22" height="17" rx="5" fill="url(#cPeach)" fill-opacity=".9"/><rect x="28" y="22" width="11" height="3" rx="1.5" fill="url(#cRed)"/><rect x="28" y="27.5" width="16" height="2.4" rx="1.2" fill="#FFF3EA" fill-opacity=".7"/><rect x="23.5" y="47" width="25" height="13" rx="5" fill="#FFF3EA" fill-opacity=".14"/><rect class="app" style="--d:0.00s" x="24.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><rect class="app" style="--d:0.15s" x="30.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><rect class="app" style="--d:0.30s" x="36.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><rect class="app" style="--d:0.45s" x="42.6" y="51" width="4.8" height="4.8" rx="1.6" fill="url(#cPeach)"/><circle class="badge" cx="52" cy="9" r="4.6" fill="url(#cPeach)"/></svg></div>
-                <div class="sc-headtxt"><span class="sc-badge"><svg class="ico"><use href="#i-zap"/></svg>Aplicativos mobile</span><h3>Seu negócio <span class="grad-text">na palma da mão.</span></h3></div>
-              </div>
-              <p>Apps para Android e iOS quando o celular faz diferença: equipes em campo, área do cliente e serviços que usam localização.</p>
-              <div class="sc-tags"><span class="sc-tag"><svg class="ico"><use href="#i-phone"/></svg>Android e iOS</span><span class="sc-tag"><svg class="ico"><use href="#i-cloud"/></svg>Offline</span><span class="sc-tag"><svg class="ico"><use href="#i-target"/></svg>Localização</span></div>
-              <ul class="sc-benefits"><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Acesso de qualquer lugar</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Funciona sem internet</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Experiência pensada para o celular</span></li></ul>
-              <a href="#contato" class="sc-cta">Conhecer aplicativos <svg class="ico"><use href="#i-arrow-right"/></svg></a>
-            </div>
-          </article>
-          <article class="sc reveal sc--consult" style="--d:80ms">
-            <div class="sc-stripe"></div>
-            <div class="sc-body">
-              <div class="sc-head">
-                <div class="sc-icon"><svg class="c3d-svg ic-consult" viewBox="0 0 72 72" aria-hidden="true"><circle class="bulb-glow" cx="36" cy="27" r="27" fill="url(#cPeach)" fill-opacity=".25"/><g filter="url(#c3d)"><path d="M36 6C24 6 16 15 16 26c0 7 4 12 8 16 2 2 3 4 3 7h18c0-3 1-5 3-7 4-4 8-9 8-16C56 15 48 6 36 6Z" fill="url(#cRed)"/><rect x="27" y="50.5" width="18" height="5" rx="2.4" fill="url(#cDark)"/><rect x="28.5" y="56.5" width="15" height="5" rx="2.4" fill="url(#cDark)"/><rect x="31.5" y="62.5" width="9" height="4.5" rx="2.2" fill="url(#cDark)"/></g><path d="M23 17c2-4 5-7 9-8" fill="none" stroke="#FFF3EA" stroke-opacity=".45" stroke-width="2.6" stroke-linecap="round"/><rect x="26" y="32" width="5" height="9" rx="1.8" fill="#FFF3EA"/><rect x="33.5" y="25" width="5" height="16" rx="1.8" fill="#FFF3EA"/><rect x="41" y="18" width="5" height="23" rx="1.8" fill="#FFF3EA"/><line class="ray" style="--d:0s" x1="36" y1="0.5" x2="36" y2="3" stroke="#FAD9C6" stroke-width="2" stroke-linecap="round"/><line class="ray" style="--d:.3s" x1="12" y1="6" x2="14.5" y2="8.5" stroke="#FAD9C6" stroke-width="2" stroke-linecap="round"/><line class="ray" style="--d:.6s" x1="60" y1="6" x2="57.5" y2="8.5" stroke="#FAD9C6" stroke-width="2" stroke-linecap="round"/></svg></div>
-                <div class="sc-headtxt"><span class="sc-badge"><svg class="ico"><use href="#i-zap"/></svg>Consultoria tecnológica</span><h3>Decida certo <span class="grad-text">antes de investir.</span></h3></div>
-              </div>
-              <p>Orientação técnica para planejar seu projeto, escolher as tecnologias certas e definir por onde começar.</p>
-              <div class="sc-tags"><span class="sc-tag"><svg class="ico"><use href="#i-bulb"/></svg>Planejamento</span><span class="sc-tag"><svg class="ico"><use href="#i-cpu"/></svg>Arquitetura</span><span class="sc-tag"><svg class="ico"><use href="#i-check-badge"/></svg>Decisões técnicas</span></div>
-              <ul class="sc-benefits"><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Menos risco no projeto</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Prioridades mais claras</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Gasto na medida certa</span></li></ul>
-              <a href="#contato" class="sc-cta">Conhecer consultoria <svg class="ico"><use href="#i-arrow-right"/></svg></a>
-            </div>
-          </article>
-          <article class="sc reveal sc--cloud" style="--d:160ms">
-            <div class="sc-stripe"></div>
-            <div class="sc-body">
-              <div class="sc-head">
-                <div class="sc-icon"><svg class="c3d-svg ic-cloud" viewBox="0 0 72 72" aria-hidden="true"><rect class="pkt" style="--d:0s;filter:drop-shadow(0 0 3px #4FC3FF)" x="23.7" y="60" width="4.6" height="4.6" rx="1.2" fill="#8FDCFF"/><rect class="pkt" style="--d:.7s;filter:drop-shadow(0 0 3px #4FC3FF)" x="33.7" y="60" width="4.6" height="4.6" rx="1.2" fill="#8FDCFF"/><rect class="pkt" style="--d:1.4s;filter:drop-shadow(0 0 3px #4FC3FF)" x="43.7" y="60" width="4.6" height="4.6" rx="1.2" fill="#8FDCFF"/><rect class="pkt" style="--d:.35s;filter:drop-shadow(0 0 3px #4FC3FF)" x="28.7" y="60" width="4.6" height="4.6" rx="1.2" fill="#8FDCFF"/><rect class="pkt" style="--d:1.05s;filter:drop-shadow(0 0 3px #4FC3FF)" x="38.7" y="60" width="4.6" height="4.6" rx="1.2" fill="#8FDCFF"/><g filter="url(#c3d)"><path d="M16 52a12 12 0 0 1 1.8-23.9A17 17 0 0 1 50 24a12.5 12.5 0 0 1 4 28.1H16z" fill="url(#cRed)"/></g></svg></div>
-                <div class="sc-headtxt"><span class="sc-badge"><svg class="ico"><use href="#i-zap"/></svg>Hospedagem e suporte</span><h3>Seu projeto <span class="grad-text">sempre no ar.</span></h3></div>
-              </div>
-              <p>Cuidamos da hospedagem, da segurança e das atualizações para que tudo continue funcionando bem depois da entrega.</p>
-              <div class="sc-tags"><span class="sc-tag"><svg class="ico"><use href="#i-server"/></svg>Hospedagem</span><span class="sc-tag"><svg class="ico"><use href="#i-message"/></svg>Suporte</span><span class="sc-tag"><svg class="ico"><use href="#i-refresh"/></svg>Manutenção</span></div>
-              <ul class="sc-benefits"><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Mais estabilidade</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Segurança em dia</span></li><li><svg class="ico"><use href="#i-check-badge"/></svg><span>Ajuda quando você precisar</span></li></ul>
-              <a href="#contato" class="sc-cta">Conhecer suporte <svg class="ico"><use href="#i-arrow-right"/></svg></a>
-            </div>
-          </article>
-        </div>
-      </div>
+    <section class="stack-strip" aria-label="Tecnologias que utilizamos">
+      <div class="container"><ul><li>React</li><li>TypeScript</li><li>Django</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li><li>n8n</li><li>WhatsApp</li></ul></div>
     </section>
 
-    <!-- PROCESSO -->
-    <section id="processo" style="padding-top: 0;">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="h2">Da sua ideia à <span class="grad-text">solução pronta.</span></h2>
-          <p class="sub">Em cinco etapas bem definidas, usamos IA para ganhar tempo sem perder qualidade. Você acompanha cada fase com transparência e comunicação clara.</p>
-        </div>
-
-        <div class="pstory" id="pstory">
-          <div class="pstage" id="pstage">
-            <div class="pbg" aria-hidden="true">
-              <div class="pbg-i bg1 on"></div>
-              <div class="pbg-i bg2"><div class="kb"><div class="kcol"><span class="kh">A fazer</span><i class="kc"></i><i class="kc"></i></div><div class="kcol"><span class="kh">Em andamento</span><i class="kc"></i></div><div class="kcol"><span class="kh">Concluído</span><i class="kc"></i><i class="kc"></i></div><b class="kmove k1"></b><b class="kmove k2"></b></div></div>
-              <div class="pbg-i bg3"><div class="ed"><div class="ed-bar"><i></i><i></i><i></i></div><div class="ed-body"><div class="ed-row" style="--ind:0"><span class="ln">1</span><span class="cd" style="--w:30%;--d:0s"></span></div><div class="ed-row" style="--ind:1"><span class="ln">2</span><span class="cd" style="--w:45%;--d:0.25s"></span></div><div class="ed-row" style="--ind:1"><span class="ln">3</span><span class="cd" style="--w:25%;--d:0.5s"></span></div><div class="ed-row" style="--ind:2"><span class="ln">4</span><span class="cd" style="--w:55%;--d:0.75s"></span></div><div class="ed-row" style="--ind:2"><span class="ln">5</span><span class="cd" style="--w:35%;--d:1s"></span></div><div class="ed-row" style="--ind:1"><span class="ln">6</span><span class="cd" style="--w:20%;--d:1.25s"></span></div><div class="ed-row" style="--ind:0"><span class="ln">7</span><span class="cd" style="--w:40%;--d:1.5s"></span></div><div class="ed-row" style="--ind:0"><span class="ln">8</span><span class="cd" style="--w:15%;--d:1.75s"></span></div><div class="ed-row" style="--ind:1"><span class="ln">9</span><span class="cd" style="--w:50%;--d:2s"></span></div><div class="ed-row" style="--ind:2"><span class="ln">10</span><span class="cd" style="--w:38%;--d:2.25s"></span></div><div class="ed-row" style="--ind:1"><span class="ln">11</span><span class="cd" style="--w:22%;--d:2.5s"></span></div><div class="ed-row" style="--ind:0"><span class="ln">12</span><span class="cd" style="--w:18%;--d:2.75s"></span></div><div class="ed-row" style="--ind:0"><span class="ln">13</span><span class="caret"></span></div></div></div></div>
-              <div class="pbg-i bg4"><div class="ed"><div class="ed-bar"><i></i><i></i><i></i></div><div class="ed-body ck-body"><div class="ck-row"><span class="ck-box" style="--d:0s"><svg viewBox="0 0 12 12"><path d="M2.4 6.3l2.4 2.4 4.8-5"/></svg></span><span class="cd" style="--w:62%;--d:0s"></span></div><div class="ck-row"><span class="ck-box" style="--d:1.2s"><svg viewBox="0 0 12 12"><path d="M2.4 6.3l2.4 2.4 4.8-5"/></svg></span><span class="cd" style="--w:48%;--d:1.2s"></span></div><div class="ck-row"><span class="ck-box" style="--d:2.4s"><svg viewBox="0 0 12 12"><path d="M2.4 6.3l2.4 2.4 4.8-5"/></svg></span><span class="cd" style="--w:70%;--d:2.4s"></span></div><div class="ck-row"><span class="ck-box" style="--d:3.6s"><svg viewBox="0 0 12 12"><path d="M2.4 6.3l2.4 2.4 4.8-5"/></svg></span><span class="cd" style="--w:40%;--d:3.6s"></span></div><div class="ck-prog"><i></i></div></div></div></div>
-              <div class="pbg-i bg5"><div class="ed"><div class="ed-bar"><i></i><i></i><i></i></div><div class="ch-area"><svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="chBar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E4574A" stop-opacity=".85"/><stop offset="1" stop-color="#E4574A" stop-opacity=".12"/></linearGradient></defs><path d="M0 15H100M0 30H100M0 45H100" stroke="rgba(242,182,153,.12)" stroke-width=".4"/><rect class="chb" style="--d:0s" x="10" y="42" width="9" height="14" rx="1.5" fill="url(#chBar)"/><rect class="chb" style="--d:0.4s" x="26" y="34" width="9" height="22" rx="1.5" fill="url(#chBar)"/><rect class="chb" style="--d:0.8s" x="42" y="26" width="9" height="30" rx="1.5" fill="url(#chBar)"/><rect class="chb" style="--d:1.2s" x="58" y="16" width="9" height="40" rx="1.5" fill="url(#chBar)"/><rect class="chb" style="--d:1.6s" x="74" y="4" width="9" height="52" rx="1.5" fill="url(#chBar)"/><path class="trend" d="M10 40L26 32L42 24L58 16L74 6" fill="none" stroke="#F8D39E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/><circle class="chd" style="--d:0s" cx="14" cy="42" r="1.6" fill="#FAD9C6"/><circle class="chd" style="--d:0.4s" cx="30" cy="34" r="1.6" fill="#FAD9C6"/><circle class="chd" style="--d:0.8s" cx="46" cy="26" r="1.6" fill="#FAD9C6"/><circle class="chd" style="--d:1.2s" cx="62" cy="16" r="1.6" fill="#FAD9C6"/><circle class="chd" style="--d:1.6s" cx="78" cy="4" r="1.6" fill="#FAD9C6"/></svg></div></div></div>
-            </div>
-            <div class="pside">
-              <ol class="pdots" id="pdots"><li><button type="button" data-go="0" aria-label="Ir para a etapa 1: Diagnóstico"><span>Diagnóstico</span></button></li><li><button type="button" data-go="1" aria-label="Ir para a etapa 2: Planejamento"><span>Planejamento</span></button></li><li><button type="button" data-go="2" aria-label="Ir para a etapa 3: Desenvolvimento"><span>Desenvolvimento</span></button></li><li><button type="button" data-go="3" aria-label="Ir para a etapa 4: Validação"><span>Validação</span></button></li><li><button type="button" data-go="4" aria-label="Ir para a etapa 5: Suporte"><span>Suporte</span></button></li></ol>
-              <div class="pnav">
-                <span class="pcount" id="pcount" aria-live="polite">01 / 05</span>
-              </div>
-            </div>
-            <div class="pcard" id="pcard">
-              <div class="pnum" id="pnum">01</div>
-              <div class="ptext">
-                <span class="pkick" id="pkick">Alinhamento</span>
-                <h3 class="ptitle" id="ptitle">Diagnóstico</h3>
-                <p class="pdesc" id="pdesc"></p>
-                <span class="pdur" id="pdur"></span>
-              </div>
-            </div>
-            <div class="phint" id="pHint" aria-hidden="true"><span>Role ou clique nas etapas para navegar</span><svg class="ico"><use href="#i-arrow-right"/></svg></div>
-          </div>
-          <div class="pstep" data-i="0"></div>
-          <div class="pstep" data-i="1"></div>
-          <div class="pstep" data-i="2"></div>
-          <div class="pstep" data-i="3"></div>
-          <div class="pstep" data-i="4"></div>
-        </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="about">
+    <section class="sec" id="sobre">
       <div class="container about-grid">
-        <div class="reveal">
-          <h2 class="h2">Tecnologia sem <span class="grad-text">barreira técnica.</span></h2>
+        <div class="rv">
+          <span class="eyebrow">Sobre a Ariramba</span>
+          <h2>Tecnologia sem barreira técnica.</h2>
           <p class="sub">A Ariramba existe para colocar a tecnologia a favor de quem precisa dela, sem exigir que você entenda do assunto. Em cada projeto, escolhemos a tecnologia certa e usamos IA em nossos processos para entregar com mais qualidade, desempenho e velocidade. Você recebe resultados práticos em menos tempo, com segurança e respeito à LGPD desde o início. E acompanha tudo em linguagem clara, do primeiro contato ao suporte.</p>
-          <div class="about-chips"><span class="about-chip"><svg class="ico"><use href="#i-message"/></svg>Linguagem clara</span><span class="about-chip"><svg class="ico"><use href="#i-cpu"/></svg>IA nos processos</span><span class="about-chip"><svg class="ico"><use href="#i-shield"/></svg>LGPD desde o início</span></div>
+          <div class="chips"><span>Linguagem clara</span><span>IA nos processos</span><span>LGPD desde o início</span></div>
         </div>
-        <ol class="vtl reveal" aria-label="Sinais de que é hora de usar a tecnologia a seu favor">
-          <li class="vtl-item">
-            <div class="ibox"><svg class="ico"><use href="#i-layout"/></svg></div>
-            <div><b>Planilhas e retrabalho</b><span>A mesma informação digitada em vários lugares, aumentando o risco de erros e roubando horas da sua semana.</span></div>
-          </li>
-          <li class="vtl-item">
-            <div class="ibox"><svg class="ico"><use href="#i-message"/></svg></div>
-            <div><b>Atendimento desorganizado</b><span>Mensagens dispersas, respostas lentas e clientes esperando, com oportunidades de venda se perdendo pelo caminho.</span></div>
-          </li>
-          <li class="vtl-item">
-            <div class="ibox"><svg class="ico"><use href="#i-zap"/></svg></div>
-            <div><b>Processos manuais</b><span>Tarefas repetitivas que consomem o tempo da equipe e poderiam ser automatizadas.</span></div>
-          </li>
-          <li class="vtl-item">
-            <div class="ibox"><svg class="ico"><use href="#i-workflow"/></svg></div>
-            <div><b>Ferramentas desconectadas</b><span>Sistemas que não se integram e deixam você sem uma visão completa do negócio.</span></div>
-          </li>
+        <ol class="signs" aria-label="Sinais de que é hora de usar a tecnologia a seu favor">
+          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-sheet"/></svg></span><div><b>Planilhas e retrabalho</b><span>A mesma informação digitada em vários lugares, aumentando o risco de erros e roubando horas da sua semana.</span></div></li>
+          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span><div><b>Atendimento desorganizado</b><span>Mensagens dispersas, respostas lentas e clientes esperando, com oportunidades de venda se perdendo pelo caminho.</span></div></li>
+          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span><div><b>Processos manuais</b><span>Tarefas repetitivas que consomem o tempo da equipe e poderiam ser automatizadas.</span></div></li>
+          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-plug"/></svg></span><div><b>Ferramentas desconectadas</b><span>Sistemas que não se integram e deixam você sem uma visão completa do negócio.</span></div></li>
         </ol>
       </div>
     </section>
 
-    <!-- TECNOLOGIAS -->
-    <section id="tecnologias" style="padding-top: 0;">
+    <section class="sec alt" id="servicos">
       <div class="container">
-        <div class="reveal">
-          <h2 class="h2">Tecnologia certa para <span class="grad-text">cada projeto.</span></h2>
-          <p class="sub">Utilizamos tecnologias modernas, seguras e confiáveis, escolhidas para a necessidade de cada cliente. Priorizamos qualidade, desempenho e facilidade de manutenção, e usamos IA no desenvolvimento para entregar soluções que funcionam hoje e evoluem com você.</p>
+        <div class="head rv">
+          <span class="eyebrow">Serviços</span>
+          <h2>A solução certa para cada necessidade.</h2>
+          <p class="sub">Do site simples ao sistema completo, usamos a tecnologia certa para o seu objetivo, com resultado prático e em tempo reduzido.</p>
         </div>
-        <div class="tslider" role="region" aria-label="Tecnologias que utilizamos">
-          <div class="tstrip" id="tStrip"></div>
+        <div class="grid3">
+        <article class="card svc rv">
+          <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-bot"/></svg></span>
+          <span class="badge">Automações e IA</span>
+          <h3>Automatize sua rotina com Inteligência Artificial</h3>
+          <p>Automatizamos o WhatsApp, integramos suas ferramentas e criamos fluxos que eliminam tarefas manuais, com resultado visível desde as primeiras semanas.</p>
+          <div class="tags"><span>Agentes de IA</span><span>WhatsApp</span><span>Integrações</span></div>
+          <a class="more" href="#contato">Conhecer automações <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card svc rv">
+          <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span>
+          <span class="badge">Sistemas web</span>
+          <h3>Um sistema feito para o seu processo</h3>
+          <p>Sistemas de gestão, painéis e portais de clientes ajustados ao seu processo. Também modernizamos sistemas antigos para que acompanhem o seu crescimento.</p>
+          <div class="tags"><span>Gestão</span><span>Portais</span><span>APIs</span></div>
+          <a class="more" href="#contato">Conhecer sistemas <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card svc rv">
+          <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></span>
+          <span class="badge">Sites e landing pages</span>
+          <h3>Sua presença digital, rápida e profissional</h3>
+          <p>Sites pessoais, institucionais, portfólios e páginas de vendas feitos para apresentar bem você ou o seu negócio.</p>
+          <div class="tags"><span>Sites</span><span>SEO</span><span>Landing pages</span></div>
+          <a class="more" href="#contato">Conhecer sites <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card svc rv">
+          <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <span class="badge">Aplicativos mobile</span>
+          <h3>Seu negócio na palma da mão</h3>
+          <p>Apps para Android e iOS quando o celular faz diferença: equipes em campo, área do cliente e serviços que usam localização.</p>
+          <div class="tags"><span>Android e iOS</span><span>Offline</span><span>Localização</span></div>
+          <a class="more" href="#contato">Conhecer aplicativos <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card svc rv">
+          <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-compass"/></svg></span>
+          <span class="badge">Consultoria tecnológica</span>
+          <h3>Decida certo antes de investir</h3>
+          <p>Orientação técnica para planejar seu projeto, escolher as tecnologias certas e definir por onde começar.</p>
+          <div class="tags"><span>Planejamento</span><span>Arquitetura</span><span>Decisões técnicas</span></div>
+          <a class="more" href="#contato">Conhecer consultoria <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card svc rv">
+          <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
+          <span class="badge">Hospedagem e suporte</span>
+          <h3>Seu projeto sempre no ar</h3>
+          <p>Cuidamos da hospedagem, da segurança e das atualizações para que tudo continue funcionando bem depois da entrega.</p>
+          <div class="tags"><span>Hospedagem</span><span>Suporte</span><span>Manutenção</span></div>
+          <a class="more" href="#contato">Conhecer suporte <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </article>
         </div>
       </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" style="padding-top: 0;">
-      <div class="container contact-grid">
-        <div class="reveal">
-          <span class="kicker">Contato</span>
-          <h2 class="h2">Vamos conversar sobre o seu <span class="grad-text">projeto?</span></h2>
-          <p class="sub">Conte o que você precisa e nossa equipe ajuda você a encontrar a solução certa, com clareza e sem complicação.</p>
-          <div class="contact-list">
-            <a href="mailto:[e-mail de contato]"><div class="ibox"><svg class="ico"><use href="#i-mail"/></svg></div><span><small>E-mail</small>[e-mail de contato]</span></a>
-            <a href="#contato"><div class="ibox"><svg class="ico"><use href="#i-brand-wa"/></svg></div><span><small>WhatsApp</small>[número de contato]</span></a>
-          </div>
-          <div class="contact-perks">
-            <div class="perk"><svg class="ico"><use href="#i-zap"/></svg><span>Resposta em<br>até 48h</span></div>
-            <div class="perk"><svg class="ico"><use href="#i-users"/></svg><span>Atendimento<br>humanizado</span></div>
-            <div class="perk"><svg class="ico"><use href="#i-layout"/></svg><span>Resultados<br>práticos</span></div>
-          </div>
-        </div>
+    <section class="facts" aria-label="Como trabalhamos">
+      <div class="container facts-grid">
+        <div class="fact"><b>24h a 48h</b><span>para o diagnóstico</span></div>
+        <div class="fact"><b>5 etapas</b><span>claras do início ao suporte</span></div>
+        <div class="fact"><b>Apoio de IA</b><span>em cada entrega</span></div>
+        <div class="fact"><b>Sob medida</b><span>serviços contratados separadamente</span></div>
+      </div>
+    </section>
 
-        <form class="lead reveal" id="leadForm" novalidate>
-          <div class="lead-head">
-            <div class="ibox"><svg class="ico"><use href="#i-message"/></svg></div>
-            <div><h3>Fale com a gente</h3><p>Preencha os dados abaixo e retornamos com a melhor solução para o seu caso.</p></div>
+    <section class="sec" id="portfolio">
+      <div class="container">
+        <div class="head rv">
+          <span class="eyebrow">Portfólio</span>
+          <h2>Projetos que colocam a tecnologia em ação.</h2>
+          <p class="sub">Alguns dos trabalhos que entregamos, do site simples ao sistema completo. [Substitua pelos projetos reais.]</p>
+        </div>
+        <div class="filters rv" role="group" aria-label="Filtrar projetos por tipo">
+          <button type="button" class="on" data-f="todos" aria-pressed="true">Todos</button>
+          <button type="button" data-f="sites" aria-pressed="false">Sites</button>
+          <button type="button" data-f="sistemas" aria-pressed="false">Sistemas</button>
+          <button type="button" data-f="apps" aria-pressed="false">Aplicativos</button>
+          <button type="button" data-f="ia" aria-pressed="false">Automações e IA</button>
+        </div>
+        <div class="grid3" id="pfGrid">
+          <article class="card pf rv" data-cat="sites">
+            <div class="thumb t-a" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></div>
+            <div class="pf-body">
+              <span class="badge">Sites e landing pages</span>
+              <h3>[Nome do projeto 1]</h3>
+              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
+              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="card pf rv" data-cat="sistemas">
+            <div class="thumb t-b" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div>
+            <div class="pf-body">
+              <span class="badge">Sistemas web</span>
+              <h3>[Nome do projeto 2]</h3>
+              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
+              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="card pf rv" data-cat="apps">
+            <div class="thumb t-c" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></div>
+            <div class="pf-body">
+              <span class="badge">Aplicativos mobile</span>
+              <h3>[Nome do projeto 3]</h3>
+              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
+              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="card pf rv" data-cat="ia">
+            <div class="thumb t-a" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-bot"/></svg></div>
+            <div class="pf-body">
+              <span class="badge">Automações e IA</span>
+              <h3>[Nome do projeto 4]</h3>
+              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
+              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="card pf rv" data-cat="sistemas">
+            <div class="thumb t-b" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div>
+            <div class="pf-body">
+              <span class="badge">Sistemas web</span>
+              <h3>[Nome do projeto 5]</h3>
+              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
+              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="card pf rv" data-cat="sites">
+            <div class="thumb t-c" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></div>
+            <div class="pf-body">
+              <span class="badge">Sites e landing pages</span>
+              <h3>[Nome do projeto 6]</h3>
+              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
+              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="processo">
+      <div class="container">
+        <div class="head rv">
+          <span class="eyebrow">Como trabalhamos</span>
+          <h2>Da sua ideia à solução pronta.</h2>
+          <p class="sub">Em cinco etapas bem definidas, usamos IA para ganhar tempo sem perder qualidade. Você acompanha cada fase com transparência e comunicação clara.</p>
+        </div>
+        <ol class="steps">
+        <li class="step rv"><span class="num">01</span><div><span class="kick">Diagnóstico</span><h3>Entendemos o seu problema</h3><p>Conversamos para entender o que toma o seu tempo e priorizamos o que traz resultado mais rápido.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> 24h a 48h</span></div></li>
+        <li class="step rv"><span class="num">02</span><div><span class="kick">Planejamento</span><h3>Desenhamos a solução</h3><p>Definimos escopo, fluxos e tecnologias antes de escrever a primeira linha de código.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> 3 a 7 dias</span></div></li>
+        <li class="step rv"><span class="num">03</span><div><span class="kick">Desenvolvimento</span><h3>Construímos com você</h3><p>Desenvolvemos com apoio de IA para entregar mais rápido e com mais qualidade, em partes curtas que você acompanha e aprova.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> 2 a 6 semanas</span></div></li>
+        <li class="step rv"><span class="num">04</span><div><span class="kick">Validação</span><h3>Testamos antes de publicar</h3><p>Testamos desempenho, segurança e usabilidade, com revisão assistida por IA, antes de colocar no ar.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> 3 a 7 dias</span></div></li>
+        <li class="step rv"><span class="num">05</span><div><span class="kick">Suporte</span><h3>Cuidamos depois do lançamento</h3><p>Hospedagem, monitoramento, manutenção e melhorias para o projeto continuar funcionando e evoluindo.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> Contínuo</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="sec alt" id="tecnologias">
+      <div class="container">
+        <div class="head rv">
+          <span class="eyebrow">Tecnologias</span>
+          <h2>Tecnologia certa para cada projeto.</h2>
+          <p class="sub">Utilizamos tecnologias modernas, seguras e confiáveis, escolhidas para a necessidade de cada cliente. Priorizamos qualidade, desempenho e facilidade de manutenção, e usamos IA no desenvolvimento para entregar soluções que funcionam hoje e evoluem com você.</p>
+        </div>
+        <div class="tgrid">
+        <div class="tgroup rv"><h3>Frontend</h3><div class="chips"><span>React</span><span>TypeScript</span><span>Material UI</span></div></div>
+        <div class="tgroup rv"><h3>Mobile</h3><div class="chips"><span>React Native</span><span>Flutter</span></div></div>
+        <div class="tgroup rv"><h3>Backend</h3><div class="chips"><span>Django</span><span>FastAPI</span></div></div>
+        <div class="tgroup rv"><h3>Dados</h3><div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>Redis</span></div></div>
+        <div class="tgroup rv"><h3>Infra</h3><div class="chips"><span>Docker</span><span>Kubernetes</span><span>Linux / VPS</span><span>CI/CD</span></div></div>
+        <div class="tgroup rv"><h3>Automação e IA</h3><div class="chips"><span>n8n</span><span>MCP</span><span>LangChain</span></div></div>
+        <div class="tgroup rv"><h3>Integrações</h3><div class="chips"><span>Evolution API</span><span>WhatsApp</span><span>Telegram</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="contato">
+      <div class="container contact-grid">
+        <div class="rv">
+          <span class="eyebrow">Contato</span>
+          <h2>Vamos conversar sobre o seu projeto?</h2>
+          <p class="sub">Conte o que você precisa e nossa equipe ajuda você a encontrar a solução certa, com clareza e sem complicação.</p>
+          <ul class="contact-list">
+            <li><a href="mailto:[e-mail de contato]"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>E-mail</small>[e-mail de contato]</span></a></li>
+            <li><a href="#contato"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span><span><small>WhatsApp</small>[número de contato]</span></a></li>
+          </ul>
+          <ul class="perks"><li>Resposta em até 48h</li><li>Atendimento humanizado</li><li>Resultados práticos</li></ul>
+        </div>
+        <form class="card leadform rv" id="leadForm" novalidate>
+          <h3>Fale com a gente</h3>
+          <p class="sub-s">Preencha os dados abaixo e retornamos com a melhor solução para o seu caso.</p>
+          <div class="fields">
+            <div class="field"><label for="name">Nome</label><input id="name" name="name" autocomplete="name" /></div>
+            <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+            <div class="field"><label for="company">Empresa (opcional)</label><input id="company" name="company" autocomplete="organization" /></div>
+            <div class="field"><label for="phone">WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+            <div class="field full"><label for="service">Do que você precisa?</label>
+              <select id="service" name="service"><option value="">Escolha uma opção</option><option>Site ou landing page</option><option>Sistema web</option><option>Aplicativo mobile</option><option>Automações e IA</option><option>Consultoria tecnológica</option><option>Hospedagem, suporte ou manutenção</option><option>Ainda não sei</option></select></div>
+            <div class="field full"><label for="message">Conte um pouco sobre o seu projeto</label><textarea id="message" name="message" placeholder="Ex.: preciso de um site, sistema, aplicativo ou automação..."></textarea></div>
           </div>
-          <div class="field"><label for="name"><svg class="ico"><use href="#i-users"/></svg>Nome</label><input id="name" name="name" autocomplete="name" /></div>
-          <div class="field"><label for="email"><svg class="ico"><use href="#i-mail"/></svg>E-mail</label><input id="email" name="email" type="email" autocomplete="email" /></div>
-          <div class="field"><label for="company"><svg class="ico"><use href="#i-briefcase"/></svg>Empresa (opcional)</label><input id="company" name="company" autocomplete="organization" /></div>
-          <div class="field"><label for="phone"><svg class="ico"><use href="#i-phone-call"/></svg>WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
-          <div class="field full">
-            <label for="service"><svg class="ico"><use href="#i-target"/></svg>Do que você precisa?</label>
-            <select id="service" name="service">
-              <option value="">Escolha uma opção</option>
-              <option>Site ou landing page</option>
-              <option>Sistema web</option>
-              <option>Aplicativo mobile</option>
-              <option>Automações e IA</option>
-              <option>Consultoria tecnológica</option>
-              <option>Hospedagem, suporte ou manutenção</option>
-              <option>Ainda não sei</option>
-            </select>
-          </div>
-          <div class="field full"><label for="message"><svg class="ico"><use href="#i-message"/></svg>Conte um pouco sobre o seu projeto</label><textarea id="message" name="message" placeholder="Ex.: preciso de um site, sistema, aplicativo ou automação..."></textarea></div>
           <div class="form-foot">
-            <small><svg class="ico"><use href="#i-shield"/></svg>Seus dados serão usados apenas para falar sobre o seu projeto.</small>
-            <button type="submit" class="btn btn-primary magnetic">Enviar solicitação <svg class="ico"><use href="#i-send"/></svg></button>
-            <a class="lead-wa" href="#contato"><svg class="ico"><use href="#i-brand-wa"/></svg>Ou, se preferir, fale pelo WhatsApp</a>
+            <small>Seus dados serão usados apenas para falar sobre o seu projeto.</small>
+            <button type="submit" class="btn btn-primary">Enviar solicitação</button>
+            <a class="lead-wa" href="#contato">Ou, se preferir, fale pelo WhatsApp</a>
           </div>
           <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
-
   </main>
 
   <footer>
     <div class="container foot">
-      <span>&copy; <span id="year"></span> Ariramba Sistemas. Soluções tecnológicas para quem não pode perder tempo. <button type="button" class="cookie-link" id="cookiePrefs">Política de cookies</button></span>
-      <div class="socials">
-        <a href="#contato" aria-label="WhatsApp"><svg class="ico"><use href="#i-brand-wa"/></svg></a>
-        <a href="#contato" aria-label="LinkedIn"><svg class="ico"><use href="#i-brand-in"/></svg></a>
-        <a href="#contato" aria-label="GitHub"><svg class="ico"><use href="#i-brand-gh"/></svg></a>
-        <a href="#contato" aria-label="Instagram"><svg class="ico"><use href="#i-brand-ig"/></svg></a>
-      </div>
+      <a href="#inicio" class="brand" aria-label="Ariramba Sistemas - início"><img src="img/logo-ariramba.webp" alt="" width="40" height="40" /> <span>Ariramba</span></a>
+      <p>Soluções tecnológicas para quem não pode perder tempo.</p>
+      <ul class="flinks"><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#portfolio">Portfólio</a></li><li><a href="#processo">Processo</a></li><li><a href="#tecnologias">Tecnologias</a></li><li><a href="#contato">Contato</a></li></ul>
+      <div class="copy">&copy; <span id="year">2026</span> Ariramba Sistemas. <button type="button" class="cookie-link" id="cookiePrefs">Política de cookies</button></div>
     </div>
   </footer>
 
@@ -474,8 +335,7 @@
     </div>
   </div>
 
-  <button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg class="ico"><use href="#i-up"/></svg></button>
-
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></button>
   <script src="js/main.min.js" defer></script>
 </body>
 </html>
