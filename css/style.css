@@ -444,6 +444,23 @@ footer { border-top: 1px solid var(--glass-border); padding-block: 40px; }
 .foot nav a { display: inline-flex; align-items: center; gap: 6px; transition: color .25s; }
 .foot nav a .ico { font-size: 14px; }
 .foot nav a:hover { color: var(--text); }
+
+/* Aviso de cookies */
+.cookie { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 90; max-width: 400px; padding: 20px; border-radius: 18px; background: rgba(35,35,39,.97); border: 1px solid var(--glass-border); box-shadow: 0 24px 60px -20px rgba(0,0,0,.8); font-size: .9rem; color: var(--muted); opacity: 0; transform: translateY(16px); transition: opacity .25s var(--ease), transform .25s var(--ease); }
+.cookie.show { opacity: 1; transform: none; }
+.cookie[hidden] { display: none; }
+.cookie-title { font-family: var(--display); font-weight: 800; font-size: 1.05rem; color: var(--text); margin: 0 0 6px; }
+.cookie p { margin: 0; }
+.cookie-more { margin-top: 10px; }
+.cookie-more summary { cursor: pointer; color: var(--ice); font-weight: 600; }
+.cookie-more ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 6px; font-size: .84rem; }
+.cookie-more b { color: var(--text); }
+.cookie-actions { display: flex; gap: 10px; margin-top: 16px; }
+.cookie-actions .btn { flex: 1; justify-content: center; min-height: 44px; padding: 0 16px; }
+.cookie-link { background: none; border: 0; padding: 0 0 0 6px; color: var(--ice); font: inherit; text-decoration: underline; cursor: pointer; }
+.cookie-link:hover { color: var(--text); }
+@media (min-width: 640px) { .cookie { left: 24px; right: auto; bottom: 24px; } }
+@media (prefers-reduced-motion: reduce) { .cookie { transition: none; } }
 .socials { display: flex; gap: 10px; }
 .socials a { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; border: 1px solid var(--glass-border); background: var(--glass); font-size: 18px; transition: transform .35s var(--ease), color .25s, border-color .25s; }
 .socials a:hover { transform: translateY(-4px) rotate(-6deg); color: var(--green); border-color: rgba(248,211,158,.4); }

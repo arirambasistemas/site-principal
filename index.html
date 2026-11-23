@@ -9,6 +9,8 @@
   <link rel="preload" href="fonts/plusjakarta.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="css/style.min.css" />
+  <!-- OpenAI Pixel: só carrega depois do consentimento de cookies (LGPD) -->
+  <script>window.loadOaiPixel=function(){!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"KHo486SdCyVBVsU5zs6wmc",debug:false});};try{if(localStorage.getItem("ariramba-cookies")==="aceito")window.loadOaiPixel();}catch(e){}</script>
 </head>
 <body>
 
@@ -445,7 +447,7 @@
 
   <footer>
     <div class="container foot">
-      <span>&copy; <span id="year"></span> Ariramba Sistemas. Soluções tecnológicas para quem não pode perder tempo.</span>
+      <span>&copy; <span id="year"></span> Ariramba Sistemas. Soluções tecnológicas para quem não pode perder tempo. <button type="button" class="cookie-link" id="cookiePrefs">Política de cookies</button></span>
       <div class="socials">
         <a href="#contato" aria-label="WhatsApp"><svg class="ico"><use href="#i-brand-wa"/></svg></a>
         <a href="#contato" aria-label="LinkedIn"><svg class="ico"><use href="#i-brand-in"/></svg></a>
@@ -454,6 +456,23 @@
       </div>
     </div>
   </footer>
+
+  <div class="cookie" id="cookieBox" role="dialog" aria-labelledby="cookieTitle" aria-describedby="cookieText" hidden>
+    <p class="cookie-title" id="cookieTitle">Política de cookies</p>
+    <p id="cookieText">Usamos cookies para medir visitas e o resultado das nossas campanhas. Eles só são ativados se você aceitar.</p>
+    <details class="cookie-more">
+      <summary>Ver detalhes</summary>
+      <ul>
+        <li><b>Essenciais:</b> guardam apenas a sua escolha sobre cookies, no seu navegador.</li>
+        <li><b>Medição e publicidade:</b> o pixel da OpenAI registra visitas e conversões e pode usar dados de formulários de forma criptografada para medir anúncios.</li>
+        <li>Não vendemos seus dados. Você pode mudar sua escolha a qualquer momento em “Política de cookies”, no rodapé.</li>
+      </ul>
+    </details>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-ghost" data-cookie="recusado">Recusar</button>
+      <button type="button" class="btn btn-primary" data-cookie="aceito">Aceitar</button>
+    </div>
+  </div>
 
   <button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg class="ico"><use href="#i-up"/></svg></button>
 

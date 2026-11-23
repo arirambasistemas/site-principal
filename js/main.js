@@ -2,6 +2,26 @@ const $ = (s, c = document) => c.querySelector(s);
 const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// Consentimento de cookies (LGPD): o pixel só carrega após "Aceitar"
+(() => {
+  const box = $('#cookieBox');
+  if (!box) return;
+  const KEY = 'ariramba-cookies';
+  let choice = null;
+  try { choice = localStorage.getItem(KEY); } catch (e) {}
+  const open = () => { box.hidden = false; requestAnimationFrame(() => box.classList.add('show')); };
+  const close = () => { box.classList.remove('show'); setTimeout(() => { box.hidden = true; }, 250); };
+  if (!choice) setTimeout(open, 1200);
+  $$('[data-cookie]', box).forEach((b) => b.addEventListener('click', () => {
+    const v = b.dataset.cookie;
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+    if (v === 'aceito' && typeof window.loadOaiPixel === 'function') window.loadOaiPixel();
+    close();
+  }));
+  const prefs = $('#cookiePrefs');
+  if (prefs) prefs.addEventListener('click', open);
+})();
+
 $('#year').textContent = new Date().getFullYear();
 
 // Título do hero: palavra por palavra
