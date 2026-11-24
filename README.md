@@ -8,6 +8,14 @@ Usamos IA em nossos processos para entregar resultados práticos, com mais quali
 
 > Soluções tecnológicas para quem não pode perder tempo.
 
+## Verificação de Conteúdo
+
+Para validar a integridade de conteúdo, ausência de textos provisórios e padronização:
+
+```bash
+sh scripts/verificar-conteudo.sh
+```
+
 ## Build
 
 Os arquivos `css/style.min.css` e `js/main.min.js` são gerados a partir de `css/style.css` e `js/main.js`:

@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=3" />
   <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png?v=3" />
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2" />
-  <link rel="stylesheet" href="css/style.min.css?v=11" />
+  <link rel="stylesheet" href="css/style.min.css?v=12" />
   <script>document.documentElement.className = "js"</script>
   <!-- OpenAI Pixel: só carrega depois do consentimento de cookies (LGPD) -->
   <script>window.loadOaiPixel = function () { !function (w, d, s, u) { if (w.oaiq) return; var q = function () { q.q.push(arguments) }; q.q = []; w.oaiq = q; var j = d.createElement(s); j.async = 1; j.src = u; var f = d.getElementsByTagName(s)[0]; f.parentNode.insertBefore(j, f); }(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js"); oaiq("init", { pixelId: "KHo486SdCyVBVsU5zs6wmc", debug: false }); }; try { if (localStorage.getItem("ariramba-cookies") === "aceito") window.loadOaiPixel(); } catch (e) { }</script>
@@ -87,7 +87,6 @@
           <li><a href="#inicio">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
           <li><a href="#processo">Processo</a></li>
           <li><a href="#tecnologias">Tecnologias</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -98,7 +97,7 @@
         aria-controls="mobileMenu"><i></i><i></i><i></i></button>
     </div>
     <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile"><a href="#inicio">Início</a><a
-        href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a
+        href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a
         href="#processo">Processo</a><a href="#tecnologias">Tecnologias</a><a href="#contato">Contato</a></nav>
   </header>
 
@@ -119,34 +118,7 @@
         </div>
         <div class="hero-art" aria-hidden="true">
           <div class="orb"></div>
-          <span class="fl f1"><svg class="ico" aria-hidden="true">
-              <use href="#i-globe" />
-            </svg>Landing Pages</span>
-          <span class="fl f2"><svg class="ico" aria-hidden="true">
-              <use href="#i-phone" />
-            </svg>Aplicativos</span>
-          <span class="fl f3"><svg class="ico" aria-hidden="true">
-              <use href="#i-layers" />
-            </svg>Sistemas Web</span>
-          <span class="fl f4"><svg class="ico" aria-hidden="true">
-              <use href="#i-shield" />
-            </svg>Segurança</span>
         </div>
-      </div>
-    </section>
-
-    <section class="stack-strip" aria-label="Tecnologias que utilizamos">
-      <div class="container">
-        <ul>
-          <li>React</li>
-          <li>TypeScript</li>
-          <li>Django</li>
-          <li>FastAPI</li>
-          <li>PostgreSQL</li>
-          <li>Docker</li>
-          <li>n8n</li>
-          <li>WhatsApp</li>
-        </ul>
       </div>
     </section>
 
@@ -156,14 +128,13 @@
           <span class="eyebrow">Sobre a Ariramba</span>
           <h2>Tecnologia sem barreira técnica.</h2>
           <p class="sub">A Ariramba existe para colocar a tecnologia a favor de quem precisa dela, sem exigir que você
-            entenda do assunto. Em cada projeto, escolhemos a tecnologia certa e usamos IA em nossos processos para
-            entregar com mais qualidade, desempenho e velocidade. Você recebe resultados práticos em menos tempo, com
-            segurança e respeito à LGPD desde o início. E acompanha tudo em linguagem clara, do primeiro contato ao
-            suporte.</p>
-          <div class="chips"><span>Linguagem clara</span><span>IA nos processos</span><span>LGPD desde o início</span>
+            entenda do assunto. Em cada projeto, escolhemos a ferramenta ideal para entregar com solidez e velocidade.
+            Você recebe soluções completas e seguras, com respeito à LGPD desde o início, acompanhando tudo em linguagem clara,
+            do primeiro contato ao suporte.</p>
+          <div class="chips"><span>Linguagem clara</span><span>Segurança técnica</span><span>LGPD desde o início</span>
           </div>
         </div>
-        <ol class="signs" aria-label="Sinais de que é hora de usar a tecnologia a seu favor">
+        <ul class="signs" aria-label="Sinais de que é hora de usar a tecnologia a seu favor">
           <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true">
                 <use href="#i-sheet" />
               </svg></span>
@@ -188,7 +159,7 @@
             <div><b>Ferramentas desconectadas</b><span>Sistemas que não se integram e deixam você sem uma visão completa
                 do negócio.</span></div>
           </li>
-        </ol>
+        </ul>
       </div>
     </section>
 
@@ -197,8 +168,7 @@
         <div class="head rv">
           <span class="eyebrow">Serviços</span>
           <h2>Cinco serviços para tirar o seu projeto do papel.</h2>
-          <p class="sub">Landing pages, aplicativos, sistemas, segurança e consultoria em IA. Cada serviço com resultado
-            prático e em tempo reduzido.</p>
+          <p class="sub">Landing pages, aplicativos mobile, sistemas web, segurança em vibe coding e consultoria em IA. Cada serviço com resultado prático e suporte contínuo.</p>
         </div>
         <div class="grid2">
           <article class="card svc rv">
@@ -209,8 +179,8 @@
             <h3>Sua presença digital, rápida e profissional</h3>
             <p>Páginas de venda e captação feitas para apresentar bem o seu negócio, carregar rápido e transformar
               visitas em contatos.</p>
-            <div class="tags"><span>Landing pages</span><span>SEO</span><span>Alta velocidade</span></div>
-            <a class="more" href="#contato">Conhecer landing pages <svg class="ico" aria-hidden="true">
+            <div class="tags"><span>SEO</span><span>Alta velocidade</span></div>
+            <a class="more" href="/landing-pages/">Conhecer o serviço de Landing Pages <svg class="ico" aria-hidden="true">
                 <use href="#i-arrow" />
               </svg></a>
           </article>
@@ -223,7 +193,7 @@
             <p>Apps para Android e iOS quando o celular faz diferença: equipes em campo, área do cliente e serviços que
               usam localização.</p>
             <div class="tags"><span>Android e iOS</span><span>Offline</span><span>Localização</span></div>
-            <a class="more" href="#contato">Conhecer aplicativos <svg class="ico" aria-hidden="true">
+            <a class="more" href="#contato">Solicitar orçamento de Aplicativos Mobile <svg class="ico" aria-hidden="true">
                 <use href="#i-arrow" />
               </svg></a>
           </article>
@@ -236,7 +206,7 @@
             <p>Sistemas de gestão, painéis e portais de clientes ajustados ao seu processo. Também modernizamos sistemas
               antigos para que acompanhem o seu crescimento.</p>
             <div class="tags"><span>Gestão</span><span>Portais</span><span>APIs</span></div>
-            <a class="more" href="#contato">Conhecer sistemas <svg class="ico" aria-hidden="true">
+            <a class="more" href="#contato">Solicitar orçamento de Sistemas Web <svg class="ico" aria-hidden="true">
                 <use href="#i-arrow" />
               </svg></a>
           </article>
@@ -246,11 +216,11 @@
               </svg></span>
             <span class="badge">Segurança em Vibe Coding</span>
             <h3>Código gerado por IA, protegido antes de ir ao ar</h3>
-            <p>Criou seu projeto com ferramentas de IA? Revisamos o código, os acessos e as configurações para encontrar
+            <p>Criou seu projeto com ferramentas de IA (vibe coding)? Revisamos o código, os acessos e as configurações para encontrar
               falhas e corrigi-las antes que virem problema.</p>
             <div class="tags"><span>Revisão de código</span><span>Segredos e acessos</span><span>Dependências</span>
             </div>
-            <a class="more" href="#contato">Conhecer a segurança <svg class="ico" aria-hidden="true">
+            <a class="more" href="#contato">Solicitar orçamento de Segurança em Vibe Coding <svg class="ico" aria-hidden="true">
                 <use href="#i-arrow" />
               </svg></a>
           </article>
@@ -317,113 +287,8 @@
       <div class="container facts-grid">
         <div class="fact"><b>24h a 48h</b><span>para o diagnóstico</span></div>
         <div class="fact"><b>5 etapas</b><span>claras do início ao suporte</span></div>
-        <div class="fact"><b>Apoio de IA</b><span>em cada entrega</span></div>
+        <div class="fact"><b>Engenharia sólida</b><span>qualidade em cada entrega</span></div>
         <div class="fact"><b>Sob medida</b><span>serviços contratados separadamente</span></div>
-      </div>
-    </section>
-
-    <section class="sec" id="portfolio">
-      <div class="container">
-        <div class="head rv">
-          <span class="eyebrow">Portfólio</span>
-          <h2>Projetos que colocam a tecnologia em ação.</h2>
-          <p class="sub">Alguns dos trabalhos que entregamos, do site simples ao sistema completo. [Substitua pelos
-            projetos reais.]</p>
-        </div>
-        <div class="filters rv" role="group" aria-label="Filtrar projetos por tipo">
-          <button type="button" class="on" data-f="todos" aria-pressed="true">Todos</button>
-          <button type="button" data-f="landing" aria-pressed="false">Landing Pages</button>
-          <button type="button" data-f="apps" aria-pressed="false">Aplicativos</button>
-          <button type="button" data-f="sistemas" aria-pressed="false">Sistemas</button>
-          <button type="button" data-f="seguranca" aria-pressed="false">Segurança</button>
-          <button type="button" data-f="ia" aria-pressed="false">Consultoria IA</button>
-        </div>
-        <div class="grid3" id="pfGrid">
-          <article class="card pf rv" data-cat="landing">
-            <div class="thumb t-a" aria-hidden="true"><svg class="ico" aria-hidden="true">
-                <use href="#i-globe" />
-              </svg></div>
-            <div class="pf-body">
-              <span class="badge">Landing Pages</span>
-              <h3>[Nome do projeto 1]</h3>
-              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
-              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
-                  <use href="#i-arrow" />
-                </svg></a>
-            </div>
-          </article>
-          <article class="card pf rv" data-cat="sistemas">
-            <div class="thumb t-b" aria-hidden="true"><svg class="ico" aria-hidden="true">
-                <use href="#i-layers" />
-              </svg></div>
-            <div class="pf-body">
-              <span class="badge">Sistemas Web</span>
-              <h3>[Nome do projeto 2]</h3>
-              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
-              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
-                  <use href="#i-arrow" />
-                </svg></a>
-            </div>
-          </article>
-          <article class="card pf rv" data-cat="apps">
-            <div class="thumb t-c" aria-hidden="true"><svg class="ico" aria-hidden="true">
-                <use href="#i-phone" />
-              </svg></div>
-            <div class="pf-body">
-              <span class="badge">Aplicativos Mobile</span>
-              <h3>[Nome do projeto 3]</h3>
-              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
-              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
-                  <use href="#i-arrow" />
-                </svg></a>
-            </div>
-          </article>
-          <article class="card pf rv" data-cat="seguranca">
-            <div class="thumb t-a" aria-hidden="true"><svg class="ico" aria-hidden="true">
-                <use href="#i-shield" />
-              </svg></div>
-            <div class="pf-body">
-              <span class="badge">Segurança em Vibe Coding</span>
-              <h3>[Nome do projeto 4]</h3>
-              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
-              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
-                  <use href="#i-arrow" />
-                </svg></a>
-            </div>
-          </article>
-          <article class="card pf rv" data-cat="ia">
-            <div class="thumb t-b" aria-hidden="true"><svg class="ico" aria-hidden="true">
-                <use href="#i-bot" />
-              </svg></div>
-            <div class="pf-body">
-              <span class="badge">Consultoria em IA</span>
-              <h3>[Nome do projeto 5]</h3>
-              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
-              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
-                  <use href="#i-arrow" />
-                </svg></a>
-            </div>
-          </article>
-          <article class="card pf rv" data-cat="landing">
-            <div class="thumb t-c" aria-hidden="true"><svg class="ico" aria-hidden="true">
-                <use href="#i-globe" />
-              </svg></div>
-            <div class="pf-body">
-              <span class="badge">Landing Pages</span>
-              <h3>[Nome do projeto 6]</h3>
-              <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
-              <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
-                  <use href="#i-arrow" />
-                </svg></a>
-            </div>
-          </article>
-        </div>
       </div>
     </section>
 
@@ -432,8 +297,7 @@
         <div class="head rv">
           <span class="eyebrow">Como trabalhamos</span>
           <h2>Da sua ideia à solução pronta.</h2>
-          <p class="sub">Em cinco etapas bem definidas, usamos IA para ganhar tempo sem perder qualidade. Você acompanha
-            cada fase com transparência e comunicação clara.</p>
+          <p class="sub">Em cinco etapas bem definidas, estruturamos soluções sob medida com qualidade e transparência. Você acompanha cada fase com clareza.</p>
         </div>
         <ol class="steps">
           <li class="step rv"><span class="num">01</span>
@@ -457,8 +321,7 @@
           <li class="step rv"><span class="num">03</span>
             <div><span class="kick">Desenvolvimento</span>
               <h3>Construímos com você</h3>
-              <p>Desenvolvemos com apoio de IA para entregar mais rápido e com mais qualidade, em partes curtas que você
-                acompanha e aprova.</p><span class="dur"><svg class="ico" aria-hidden="true">
+              <p>Desenvolvemos em ciclos curtos e objetivos que você acompanha e aprova.</p><span class="dur"><svg class="ico" aria-hidden="true">
                   <use href="#i-clock" />
                 </svg> 2 a 6 semanas</span>
             </div>
@@ -466,7 +329,7 @@
           <li class="step rv"><span class="num">04</span>
             <div><span class="kick">Validação</span>
               <h3>Testamos antes de publicar</h3>
-              <p>Testamos desempenho, segurança e usabilidade, com revisão assistida por IA, antes de colocar no ar.</p>
+              <p>Testamos desempenho, segurança e usabilidade antes de colocar no ar.</p>
               <span class="dur"><svg class="ico" aria-hidden="true">
                   <use href="#i-clock" />
                 </svg> 3 a 7 dias</span>
@@ -491,8 +354,7 @@
           <span class="eyebrow">Tecnologias</span>
           <h2>Tecnologia certa para cada projeto.</h2>
           <p class="sub">Utilizamos tecnologias modernas, seguras e confiáveis, escolhidas para a necessidade de cada
-            cliente. Priorizamos qualidade, desempenho e facilidade de manutenção, e usamos IA no desenvolvimento para
-            entregar soluções que funcionam hoje e evoluem com você.</p>
+            cliente. Priorizamos qualidade, desempenho e facilidade de manutenção para entregar soluções que funcionam hoje e evoluem com você.</p>
         </div>
         <div class="tgrid">
           <div class="tgroup rv">
@@ -535,45 +397,50 @@
           <h2>Vamos conversar sobre o seu projeto?</h2>
           <p class="sub">Conte o que você precisa e nossa equipe ajuda você a encontrar a solução certa, com clareza e
             sem complicação.</p>
-          <ul class="contact-list">
-            <li><a href="mailto:[e-mail de contato]"><span class="ic"><svg class="ico" aria-hidden="true">
-                    <use href="#i-mail" />
-                  </svg></span><span><small>E-mail</small>[e-mail de contato]</span></a></li>
-            <li><a href="#contato"><span class="ic"><svg class="ico" aria-hidden="true">
-                    <use href="#i-chat" />
-                  </svg></span><span><small>WhatsApp</small>[número de contato]</span></a></li>
-          </ul>
         </div>
         <form class="card leadform rv" id="leadForm" novalidate>
           <h3>Fale com a gente</h3>
           <p class="sub-s">Preencha os dados abaixo e retornamos com a melhor solução para o seu caso.</p>
           <div class="fields">
-            <div class="field"><label for="name">Nome</label><input id="name" name="name" autocomplete="name" /></div>
-            <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email"
-                autocomplete="email" /></div>
-            <div class="field"><label for="company">Empresa (opcional)</label><input id="company" name="company"
-                autocomplete="organization" /></div>
-            <div class="field"><label for="phone">WhatsApp</label><input id="phone" name="phone" type="tel"
-                autocomplete="tel" /></div>
-            <div class="field full"><label for="service">Do que você precisa?</label>
+            <div class="field">
+              <label for="name">Nome <span class="req" aria-hidden="true">*</span> (obrigatório)</label>
+              <input id="name" name="name" autocomplete="name" required />
+              <p class="field-error" id="name-error">Informe seu nome.</p>
+            </div>
+            <div class="field">
+              <label for="email">E-mail <span class="req" aria-hidden="true">*</span> (obrigatório)</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <p class="field-error" id="email-error">Informe um e-mail válido, como nome@exemplo.com.</p>
+            </div>
+            <div class="field">
+              <label for="company">Empresa (opcional)</label>
+              <input id="company" name="company" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="phone">WhatsApp (opcional)</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field full">
+              <label for="service">Do que você precisa?</label>
               <select id="service" name="service">
                 <option value="">Escolha uma opção</option>
-                <option>Landing Page</option>
-                <option>Aplicativo Mobile</option>
-                <option>Sistema Web</option>
+                <option>Landing Pages</option>
+                <option>Aplicativos Mobile</option>
+                <option>Sistemas Web</option>
                 <option>Segurança em Vibe Coding</option>
                 <option>Consultoria em IA</option>
                 <option>Ainda não sei</option>
               </select>
             </div>
-            <div class="field full"><label for="message">Conte um pouco sobre o seu projeto</label><textarea
-                id="message" name="message"
-                placeholder="Ex.: preciso de um site, sistema, aplicativo ou automação..."></textarea></div>
+            <div class="field full">
+              <label for="message">Conte um pouco sobre o seu projeto</label>
+              <textarea id="message" name="message"
+                placeholder="Ex.: preciso de um site, sistema, aplicativo ou automação..."></textarea>
+            </div>
           </div>
           <div class="form-foot">
             <small>Seus dados serão usados apenas para falar sobre o seu projeto.</small>
             <button type="submit" class="btn btn-primary">Enviar solicitação</button>
-            <a class="lead-wa" href="#contato">Ou, se preferir, fale pelo WhatsApp</a>
           </div>
           <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
         </form>
@@ -590,13 +457,12 @@
         <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#processo">Processo</a></li>
         <li><a href="#tecnologias">Tecnologias</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
       <div class="copy">&copy; <span id="year">2026</span> Ariramba Sistemas. <button type="button" class="cookie-link"
-          id="cookiePrefs">Política de cookies</button></div>
+          id="cookiePrefs">Gerenciar cookies</button></div>
     </div>
   </footer>
 
@@ -620,10 +486,10 @@
     </div>
   </div>
 
-  <button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg class="ico" aria-hidden="true">
+  <button class="to-top" id="toTop" type="button" aria-label="Voltar ao topo"><svg class="ico" aria-hidden="true">
       <use href="#i-up" />
     </svg></button>
-  <script src="js/main.min.js?v=4" defer></script>
+  <script src="js/main.min.js?v=5" defer></script>
 </body>
 
 </html>

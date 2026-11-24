@@ -7,18 +7,50 @@ const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   if (!box) return;
   const KEY = 'ariramba-cookies';
   let choice = null;
+  let opener = null;
   try { choice = localStorage.getItem(KEY); } catch (e) {}
-  const open = () => { box.hidden = false; requestAnimationFrame(() => box.classList.add('show')); };
-  const close = () => { box.classList.remove('show'); setTimeout(() => { box.hidden = true; }, 250); };
-  if (!choice) setTimeout(open, 1200);
+
+  const open = (userTriggered = false, triggerEl = null) => {
+    opener = triggerEl;
+    box.hidden = false;
+    requestAnimationFrame(() => {
+      box.classList.add('show');
+      if (userTriggered) {
+        const title = $('#cookieTitle', box);
+        if (title) {
+          title.setAttribute('tabindex', '-1');
+          title.focus();
+        }
+      }
+    });
+  };
+
+  const close = () => {
+    box.classList.remove('show');
+    setTimeout(() => {
+      box.hidden = true;
+      if (opener && typeof opener.focus === 'function') {
+        opener.focus();
+        opener = null;
+      }
+    }, 250);
+  };
+
+  if (!choice) setTimeout(() => open(false), 1200);
+
   $$('[data-cookie]', box).forEach((b) => b.addEventListener('click', () => {
     const v = b.dataset.cookie;
     try { localStorage.setItem(KEY, v); } catch (e) {}
     if (v === 'aceito' && typeof window.loadOaiPixel === 'function') window.loadOaiPixel();
     close();
   }));
+
   const prefs = $('#cookiePrefs');
-  if (prefs) prefs.addEventListener('click', open);
+  if (prefs) prefs.addEventListener('click', (e) => open(true, e.currentTarget));
+
+  box.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
 })();
 
 $('#year').textContent = new Date().getFullYear();
@@ -52,10 +84,18 @@ const setMenu = (open) => {
   mobileMenu.classList.toggle('open', open);
   burger.setAttribute('aria-expanded', String(open));
   burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  if (!open && document.activeElement && mobileMenu.contains(document.activeElement)) {
+    burger.focus();
+  }
 };
 burger.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
 $$('#mobileMenu a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
-addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+    setMenu(false);
+    burger.focus();
+  }
+});
 
 // Revelação ao rolar (só elementos abaixo da dobra têm a classe .rv)
 const io = new IntersectionObserver((entries) => {
@@ -65,31 +105,70 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 $$('.rv').forEach((el) => io.observe(el));
 
-// Formulário (validação; envio real depende de backend)
+// Formulário (validação acessível; envio real depende de backend)
 const form = $('#leadForm');
 const msg = $('#formMsg');
 const showMsg = (text, ok) => {
   msg.textContent = text;
   msg.className = 'form-msg show ' + (ok ? 'ok' : 'bad');
 };
+
+const setFieldError = (input, errorEl, hasError) => {
+  const field = input.closest('.field');
+  if (!field) return;
+  field.classList.toggle('err', hasError);
+  if (hasError) {
+    input.setAttribute('aria-invalid', 'true');
+    input.setAttribute('aria-describedby', errorEl.id);
+  } else {
+    input.removeAttribute('aria-invalid');
+    input.removeAttribute('aria-describedby');
+  }
+};
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const okEmail = /^\S+@\S+\.\S+$/.test(email);
-  form.name.closest('.field').classList.toggle('err', !name);
-  form.email.closest('.field').classList.toggle('err', !okEmail);
-  if (!name || !okEmail) { showMsg('Informe seu nome e um e-mail válido.', false); return; }
-  showMsg('Recebido, ' + name + '! Entraremos em contato em até 48h. (Protótipo: o envio real depende de um backend.)', true);
+  const nameInput = form.name;
+  const emailInput = form.email;
+  const nameError = $('#name-error');
+  const emailError = $('#email-error');
+
+  const nameVal = nameInput.value.trim();
+  const emailVal = emailInput.value.trim();
+  const hasNameError = !nameVal;
+  const hasEmailError = !/^\S+@\S+\.\S+$/.test(emailVal);
+
+  setFieldError(nameInput, nameError, hasNameError);
+  setFieldError(emailInput, emailError, hasEmailError);
+
+  if (hasNameError || hasEmailError) {
+    const errorCount = (hasNameError ? 1 : 0) + (hasEmailError ? 1 : 0);
+    showMsg(`Por favor, corrija o(s) ${errorCount} campo(s) destacado(s) abaixo.`, false);
+    if (hasNameError) {
+      nameInput.focus();
+    } else {
+      emailInput.focus();
+    }
+    return;
+  }
+
+  showMsg(`Recebido, ${nameVal}! Entraremos em contato em até 48h.`, true);
+  nameInput.removeAttribute('aria-invalid');
+  nameInput.removeAttribute('aria-describedby');
+  emailInput.removeAttribute('aria-invalid');
+  emailInput.removeAttribute('aria-describedby');
+  nameInput.closest('.field').classList.remove('err');
+  emailInput.closest('.field').classList.remove('err');
   form.reset();
 });
 
-// Portfólio: filtro por tipo
-(() => {
-  const btns = $$('.filters button');
-  const cards = $$('#pfGrid .pf');
-  btns.forEach((b) => b.addEventListener('click', () => {
-    btns.forEach((x) => { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', String(x === b)); });
-    cards.forEach((c) => { c.hidden = b.dataset.f !== 'todos' && c.dataset.cat !== b.dataset.f; });
-  }));
-})();
+form.name.addEventListener('input', () => {
+  if (form.name.value.trim()) {
+    setFieldError(form.name, $('#name-error'), false);
+  }
+});
+form.email.addEventListener('input', () => {
+  if (/^\S+@\S+\.\S+$/.test(form.email.value.trim())) {
+    setFieldError(form.email, $('#email-error'), false);
+  }
+});
