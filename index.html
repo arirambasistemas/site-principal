@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ariramba Sistemas | Soluções tecnológicas para quem não pode perder tempo</title>
-  <meta name="description" content="Landing pages, aplicativos mobile, sistemas web, segurança em vibe coding e consultoria em IA: a tecnologia certa para cada necessidade, com resultados práticos e em menos tempo." />
+  <meta name="description"
+    content="Landing pages, aplicativos mobile, sistemas web, segurança em vibe coding e consultoria em IA: a tecnologia certa para cada necessidade, com resultados práticos e em menos tempo." />
   <meta name="theme-color" content="#ffffff" />
   <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="img/hero-waves.svg?v=2" as="image" />
@@ -12,27 +14,67 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png?v=3" />
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2" />
   <link rel="stylesheet" href="css/style.min.css?v=11" />
-  <script>document.documentElement.className="js"</script>
+  <script>document.documentElement.className = "js"</script>
   <!-- OpenAI Pixel: só carrega depois do consentimento de cookies (LGPD) -->
-  <script>window.loadOaiPixel=function(){!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"KHo486SdCyVBVsU5zs6wmc",debug:false});};try{if(localStorage.getItem("ariramba-cookies")==="aceito")window.loadOaiPixel();}catch(e){}</script>
+  <script>window.loadOaiPixel = function () { !function (w, d, s, u) { if (w.oaiq) return; var q = function () { q.q.push(arguments) }; q.q = []; w.oaiq = q; var j = d.createElement(s); j.async = 1; j.src = u; var f = d.getElementsByTagName(s)[0]; f.parentNode.insertBefore(j, f); }(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js"); oaiq("init", { pixelId: "KHo486SdCyVBVsU5zs6wmc", debug: false }); }; try { if (localStorage.getItem("ariramba-cookies") === "aceito") window.loadOaiPixel(); } catch (e) { }</script>
 </head>
+
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
-<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
-<symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
-<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
-<symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16.2h5"/></symbol>
-<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></symbol>
-<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
-<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
-<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
-<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/></symbol>
-<symbol id="i-sheet" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M4 9h16M10 9v11.5"/></symbol>
-<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-<symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0V8ZM12 17v4"/></symbol>
-<symbol id="i-up" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></symbol>
-</defs></svg>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <rect x="7" y="2.5" width="10" height="19" rx="2.5" />
+        <path d="M11 18.5h2" />
+      </symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24">
+        <path d="M12 3 3 8l9 5 9-5-9-5Z" />
+        <path d="m3 13 9 5 9-5" />
+      </symbol>
+      <symbol id="i-bot" viewBox="0 0 24 24">
+        <rect x="4" y="8" width="16" height="11" rx="3" />
+        <path d="M12 4v4M9 13h.01M15 13h.01M9.5 16.2h5" />
+      </symbol>
+      <symbol id="i-compass" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="m15.5 8.5-2 5-5 2 2-5 5-2Z" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z" />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12.5 4.5 4.5L19 7.5" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2.5" />
+        <path d="m4 7 8 6 8-6" />
+      </symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24">
+        <path d="M4 5h16v11H9l-5 4V5Z" />
+      </symbol>
+      <symbol id="i-sheet" viewBox="0 0 24 24">
+        <rect x="4" y="3.5" width="16" height="17" rx="2" />
+        <path d="M4 9h16M10 9v11.5" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="i-plug" viewBox="0 0 24 24">
+        <path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0V8ZM12 17v4" />
+      </symbol>
+      <symbol id="i-up" viewBox="0 0 24 24">
+        <path d="m6 14 6-6 6 6" />
+      </symbol>
+    </defs>
+  </svg>
   <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
   <header class="site" id="siteHeader">
@@ -40,11 +82,24 @@
       <a href="#inicio" class="brand" aria-label="Ariramba Sistemas - início">
         <img src="img/logo-ariramba.webp?v=2" alt="" width="40" height="40" /> <span>Ariramba</span>
       </a>
-      <nav aria-label="Principal"><ul class="menu"><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#portfolio">Portfólio</a></li><li><a href="#processo">Processo</a></li><li><a href="#tecnologias">Tecnologias</a></li><li><a href="#contato">Contato</a></li></ul></nav>
+      <nav aria-label="Principal">
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#processo">Processo</a></li>
+          <li><a href="#tecnologias">Tecnologias</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
       <a href="#contato" class="btn btn-dark nav-cta">Fale com a gente</a>
-      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu"><i></i><i></i><i></i></button>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="mobileMenu"><i></i><i></i><i></i></button>
     </div>
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a href="#processo">Processo</a><a href="#tecnologias">Tecnologias</a><a href="#contato">Contato</a></nav>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile"><a href="#inicio">Início</a><a
+        href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a
+        href="#processo">Processo</a><a href="#tecnologias">Tecnologias</a><a href="#contato">Contato</a></nav>
   </header>
 
   <main id="conteudo">
@@ -54,7 +109,9 @@
         <div class="hero-copy">
           <h1>Extraia o máximo da tecnologia <span>a seu favor.</span></h1>
           <p class="lead">Você escolhe o que precisa. Nós cuidamos da tecnologia.</p>
-          <p class="sub">Criamos landing pages, aplicativos mobile e sistemas web, protegemos o código gerado com IA e ajudamos você a produzir mais com ela. Usamos IA em nossos processos para entregar com mais qualidade, desempenho e rapidez, para pessoas, profissionais e empresas.</p>
+          <p class="sub">Criamos landing pages, aplicativos mobile e sistemas web, protegemos o código gerado com IA e
+            ajudamos você a produzir mais com ela. Usamos IA em nossos processos para entregar com mais qualidade,
+            desempenho e rapidez, para pessoas, profissionais e empresas.</p>
           <div class="actions">
             <a href="#contato" class="btn btn-dark">Solicitar orçamento</a>
             <a href="#servicos" class="btn btn-primary">Conhecer serviços</a>
@@ -62,16 +119,35 @@
         </div>
         <div class="hero-art" aria-hidden="true">
           <div class="orb"></div>
-          <span class="fl f1"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>Landing Pages</span>
-          <span class="fl f2"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Aplicativos</span>
-          <span class="fl f3"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg>Sistemas Web</span>
-          <span class="fl f4"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>Segurança</span>
+          <span class="fl f1"><svg class="ico" aria-hidden="true">
+              <use href="#i-globe" />
+            </svg>Landing Pages</span>
+          <span class="fl f2"><svg class="ico" aria-hidden="true">
+              <use href="#i-phone" />
+            </svg>Aplicativos</span>
+          <span class="fl f3"><svg class="ico" aria-hidden="true">
+              <use href="#i-layers" />
+            </svg>Sistemas Web</span>
+          <span class="fl f4"><svg class="ico" aria-hidden="true">
+              <use href="#i-shield" />
+            </svg>Segurança</span>
         </div>
       </div>
     </section>
 
     <section class="stack-strip" aria-label="Tecnologias que utilizamos">
-      <div class="container"><ul><li>React</li><li>TypeScript</li><li>Django</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li><li>n8n</li><li>WhatsApp</li></ul></div>
+      <div class="container">
+        <ul>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Django</li>
+          <li>FastAPI</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+          <li>n8n</li>
+          <li>WhatsApp</li>
+        </ul>
+      </div>
     </section>
 
     <section class="sec" id="sobre">
@@ -79,14 +155,39 @@
         <div class="rv">
           <span class="eyebrow">Sobre a Ariramba</span>
           <h2>Tecnologia sem barreira técnica.</h2>
-          <p class="sub">A Ariramba existe para colocar a tecnologia a favor de quem precisa dela, sem exigir que você entenda do assunto. Em cada projeto, escolhemos a tecnologia certa e usamos IA em nossos processos para entregar com mais qualidade, desempenho e velocidade. Você recebe resultados práticos em menos tempo, com segurança e respeito à LGPD desde o início. E acompanha tudo em linguagem clara, do primeiro contato ao suporte.</p>
-          <div class="chips"><span>Linguagem clara</span><span>IA nos processos</span><span>LGPD desde o início</span></div>
+          <p class="sub">A Ariramba existe para colocar a tecnologia a favor de quem precisa dela, sem exigir que você
+            entenda do assunto. Em cada projeto, escolhemos a tecnologia certa e usamos IA em nossos processos para
+            entregar com mais qualidade, desempenho e velocidade. Você recebe resultados práticos em menos tempo, com
+            segurança e respeito à LGPD desde o início. E acompanha tudo em linguagem clara, do primeiro contato ao
+            suporte.</p>
+          <div class="chips"><span>Linguagem clara</span><span>IA nos processos</span><span>LGPD desde o início</span>
+          </div>
         </div>
         <ol class="signs" aria-label="Sinais de que é hora de usar a tecnologia a seu favor">
-          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-sheet"/></svg></span><div><b>Planilhas e retrabalho</b><span>A mesma informação digitada em vários lugares, aumentando o risco de erros e roubando horas da sua semana.</span></div></li>
-          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span><div><b>Atendimento desorganizado</b><span>Mensagens dispersas, respostas lentas e clientes esperando, com oportunidades de venda se perdendo pelo caminho.</span></div></li>
-          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span><div><b>Processos manuais</b><span>Tarefas repetitivas que consomem o tempo da equipe e poderiam ser automatizadas.</span></div></li>
-          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-plug"/></svg></span><div><b>Ferramentas desconectadas</b><span>Sistemas que não se integram e deixam você sem uma visão completa do negócio.</span></div></li>
+          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true">
+                <use href="#i-sheet" />
+              </svg></span>
+            <div><b>Planilhas e retrabalho</b><span>A mesma informação digitada em vários lugares, aumentando o risco de
+                erros e roubando horas da sua semana.</span></div>
+          </li>
+          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true">
+                <use href="#i-chat" />
+              </svg></span>
+            <div><b>Atendimento desorganizado</b><span>Mensagens dispersas, respostas lentas e clientes esperando, com
+                oportunidades de venda se perdendo pelo caminho.</span></div>
+          </li>
+          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true">
+                <use href="#i-clock" />
+              </svg></span>
+            <div><b>Processos manuais</b><span>Tarefas repetitivas que consomem o tempo da equipe e poderiam ser
+                automatizadas.</span></div>
+          </li>
+          <li class="card sign rv"><span class="ic"><svg class="ico" aria-hidden="true">
+                <use href="#i-plug" />
+              </svg></span>
+            <div><b>Ferramentas desconectadas</b><span>Sistemas que não se integram e deixam você sem uma visão completa
+                do negócio.</span></div>
+          </li>
         </ol>
       </div>
     </section>
@@ -96,65 +197,116 @@
         <div class="head rv">
           <span class="eyebrow">Serviços</span>
           <h2>Cinco serviços para tirar o seu projeto do papel.</h2>
-          <p class="sub">Landing pages, aplicativos, sistemas, segurança e consultoria em IA. Cada serviço com resultado prático e em tempo reduzido.</p>
+          <p class="sub">Landing pages, aplicativos, sistemas, segurança e consultoria em IA. Cada serviço com resultado
+            prático e em tempo reduzido.</p>
         </div>
         <div class="grid2">
           <article class="card svc rv">
-            <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></span>
+            <span class="ic"><svg class="ico" aria-hidden="true">
+                <use href="#i-globe" />
+              </svg></span>
             <span class="badge">Landing Pages</span>
             <h3>Sua presença digital, rápida e profissional</h3>
-            <p>Páginas de venda e captação feitas para apresentar bem o seu negócio, carregar rápido e transformar visitas em contatos.</p>
+            <p>Páginas de venda e captação feitas para apresentar bem o seu negócio, carregar rápido e transformar
+              visitas em contatos.</p>
             <div class="tags"><span>Landing pages</span><span>SEO</span><span>Alta velocidade</span></div>
-            <a class="more" href="#contato">Conhecer landing pages <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="more" href="#contato">Conhecer landing pages <svg class="ico" aria-hidden="true">
+                <use href="#i-arrow" />
+              </svg></a>
           </article>
           <article class="card svc rv">
-            <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <span class="ic"><svg class="ico" aria-hidden="true">
+                <use href="#i-phone" />
+              </svg></span>
             <span class="badge">Aplicativos Mobile</span>
             <h3>Seu negócio na palma da mão</h3>
-            <p>Apps para Android e iOS quando o celular faz diferença: equipes em campo, área do cliente e serviços que usam localização.</p>
+            <p>Apps para Android e iOS quando o celular faz diferença: equipes em campo, área do cliente e serviços que
+              usam localização.</p>
             <div class="tags"><span>Android e iOS</span><span>Offline</span><span>Localização</span></div>
-            <a class="more" href="#contato">Conhecer aplicativos <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="more" href="#contato">Conhecer aplicativos <svg class="ico" aria-hidden="true">
+                <use href="#i-arrow" />
+              </svg></a>
           </article>
           <article class="card svc rv">
-            <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <span class="ic"><svg class="ico" aria-hidden="true">
+                <use href="#i-layers" />
+              </svg></span>
             <span class="badge">Sistemas Web</span>
             <h3>Um sistema feito para o seu processo</h3>
-            <p>Sistemas de gestão, painéis e portais de clientes ajustados ao seu processo. Também modernizamos sistemas antigos para que acompanhem o seu crescimento.</p>
+            <p>Sistemas de gestão, painéis e portais de clientes ajustados ao seu processo. Também modernizamos sistemas
+              antigos para que acompanhem o seu crescimento.</p>
             <div class="tags"><span>Gestão</span><span>Portais</span><span>APIs</span></div>
-            <a class="more" href="#contato">Conhecer sistemas <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="more" href="#contato">Conhecer sistemas <svg class="ico" aria-hidden="true">
+                <use href="#i-arrow" />
+              </svg></a>
           </article>
           <article class="card svc rv">
-            <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <span class="ic"><svg class="ico" aria-hidden="true">
+                <use href="#i-shield" />
+              </svg></span>
             <span class="badge">Segurança em Vibe Coding</span>
             <h3>Código gerado por IA, protegido antes de ir ao ar</h3>
-            <p>Criou seu projeto com ferramentas de IA? Revisamos o código, os acessos e as configurações para encontrar falhas e corrigi-las antes que virem problema.</p>
-            <div class="tags"><span>Revisão de código</span><span>Segredos e acessos</span><span>Dependências</span></div>
-            <a class="more" href="#contato">Conhecer a segurança <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <p>Criou seu projeto com ferramentas de IA? Revisamos o código, os acessos e as configurações para encontrar
+              falhas e corrigi-las antes que virem problema.</p>
+            <div class="tags"><span>Revisão de código</span><span>Segredos e acessos</span><span>Dependências</span>
+            </div>
+            <a class="more" href="#contato">Conhecer a segurança <svg class="ico" aria-hidden="true">
+                <use href="#i-arrow" />
+              </svg></a>
           </article>
         </div>
         <article class="card feat rv" id="consultoria-ia">
           <div class="feat-copy">
-            <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-bot"/></svg></span>
+            <span class="ic"><svg class="ico" aria-hidden="true">
+                <use href="#i-bot" />
+              </svg></span>
             <span class="badge">Consultoria em IA</span>
             <h3>Produza mais com as melhores IAs do mercado</h3>
-            <p>Ajudamos você e sua equipe a tirar produtividade de verdade de ferramentas como Claude, ChatGPT, Gemini e Copilot. Menos tempo em tarefas repetitivas e mais tempo no que importa para o seu negócio.</p>
-            <div class="chips tools" aria-label="Ferramentas de IA atendidas"><span>Claude</span><span>ChatGPT</span><span>Gemini</span><span>Copilot</span><span>e outras</span></div>
-            <ol class="how" aria-label="Como funciona a consultoria"><li>Mapeamos a sua rotina</li><li>Escolhemos a IA certa</li><li>Criamos fluxos e prompts prontos</li><li>Treinamos você e sua equipe</li></ol>
+            <p>Ajudamos você e sua equipe a tirar produtividade de verdade de ferramentas como Claude, ChatGPT, Gemini e
+              Copilot. Menos tempo em tarefas repetitivas e mais tempo no que importa para o seu negócio.</p>
+            <div class="chips tools" aria-label="Ferramentas de IA atendidas">
+              <span>Claude</span><span>ChatGPT</span><span>Gemini</span><span>Copilot</span><span>e outras</span></div>
+            <ol class="how" aria-label="Como funciona a consultoria">
+              <li>Mapeamos a sua rotina</li>
+              <li>Escolhemos a IA certa</li>
+              <li>Criamos fluxos e prompts prontos</li>
+              <li>Treinamos você e sua equipe</li>
+            </ol>
             <a href="#contato" class="btn btn-lime">Quero produzir mais com IA</a>
           </div>
           <div class="feat-side">
             <h4>O que organizamos e automatizamos no seu dia a dia</h4>
             <ul class="feat-list">
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>Agendas e compromissos</b> organizadas e sem conflitos</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>E-mails</b> triagem, resumos e respostas prontas</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>Relatórios</b> automáticos e recorrentes</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>Reuniões</b> atas, resumos e tarefas definidas</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>Propostas e documentos</b> escritos e revisados em minutos</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>Planilhas e dados</b> análises e painéis sem fórmulas complicadas</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>Atendimento</b> respostas padrão e acompanhamento de clientes</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>Conteúdo</b> posts, textos de site e materiais de venda</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>Pesquisa</b> resumo de documentos e materiais longos</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><b>Rotinas administrativas</b> lembretes, cobranças e cadastros</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>Agendas e compromissos</b> organizadas e sem conflitos</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>E-mails</b> triagem, resumos e respostas prontas</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>Relatórios</b> automáticos e recorrentes</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>Reuniões</b> atas, resumos e tarefas definidas</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>Propostas e documentos</b> escritos e revisados em minutos</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>Planilhas e dados</b> análises e painéis sem fórmulas complicadas</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>Atendimento</b> respostas padrão e acompanhamento de clientes</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>Conteúdo</b> posts, textos de site e materiais de venda</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>Pesquisa</b> resumo de documentos e materiais longos</span></li>
+              <li><svg class="ico" aria-hidden="true">
+                  <use href="#i-check" />
+                </svg><span><b>Rotinas administrativas</b> lembretes, cobranças e cadastros</span></li>
             </ul>
           </div>
         </article>
@@ -175,7 +327,8 @@
         <div class="head rv">
           <span class="eyebrow">Portfólio</span>
           <h2>Projetos que colocam a tecnologia em ação.</h2>
-          <p class="sub">Alguns dos trabalhos que entregamos, do site simples ao sistema completo. [Substitua pelos projetos reais.]</p>
+          <p class="sub">Alguns dos trabalhos que entregamos, do site simples ao sistema completo. [Substitua pelos
+            projetos reais.]</p>
         </div>
         <div class="filters rv" role="group" aria-label="Filtrar projetos por tipo">
           <button type="button" class="on" data-f="todos" aria-pressed="true">Todos</button>
@@ -187,63 +340,87 @@
         </div>
         <div class="grid3" id="pfGrid">
           <article class="card pf rv" data-cat="landing">
-            <div class="thumb t-a" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></div>
+            <div class="thumb t-a" aria-hidden="true"><svg class="ico" aria-hidden="true">
+                <use href="#i-globe" />
+              </svg></div>
             <div class="pf-body">
               <span class="badge">Landing Pages</span>
               <h3>[Nome do projeto 1]</h3>
               <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
               <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg></a>
             </div>
           </article>
           <article class="card pf rv" data-cat="sistemas">
-            <div class="thumb t-b" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div>
+            <div class="thumb t-b" aria-hidden="true"><svg class="ico" aria-hidden="true">
+                <use href="#i-layers" />
+              </svg></div>
             <div class="pf-body">
               <span class="badge">Sistemas Web</span>
               <h3>[Nome do projeto 2]</h3>
               <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
               <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg></a>
             </div>
           </article>
           <article class="card pf rv" data-cat="apps">
-            <div class="thumb t-c" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></div>
+            <div class="thumb t-c" aria-hidden="true"><svg class="ico" aria-hidden="true">
+                <use href="#i-phone" />
+              </svg></div>
             <div class="pf-body">
               <span class="badge">Aplicativos Mobile</span>
               <h3>[Nome do projeto 3]</h3>
               <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
               <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg></a>
             </div>
           </article>
           <article class="card pf rv" data-cat="seguranca">
-            <div class="thumb t-a" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></div>
+            <div class="thumb t-a" aria-hidden="true"><svg class="ico" aria-hidden="true">
+                <use href="#i-shield" />
+              </svg></div>
             <div class="pf-body">
               <span class="badge">Segurança em Vibe Coding</span>
               <h3>[Nome do projeto 4]</h3>
               <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
               <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg></a>
             </div>
           </article>
           <article class="card pf rv" data-cat="ia">
-            <div class="thumb t-b" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-bot"/></svg></div>
+            <div class="thumb t-b" aria-hidden="true"><svg class="ico" aria-hidden="true">
+                <use href="#i-bot" />
+              </svg></div>
             <div class="pf-body">
               <span class="badge">Consultoria em IA</span>
               <h3>[Nome do projeto 5]</h3>
               <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
               <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg></a>
             </div>
           </article>
           <article class="card pf rv" data-cat="landing">
-            <div class="thumb t-c" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></div>
+            <div class="thumb t-c" aria-hidden="true"><svg class="ico" aria-hidden="true">
+                <use href="#i-globe" />
+              </svg></div>
             <div class="pf-body">
               <span class="badge">Landing Pages</span>
               <h3>[Nome do projeto 6]</h3>
               <p>[Descrição curta: o problema do cliente e o resultado entregue.]</p>
               <div class="tags"><span>[Tecnologia]</span><span>[Tecnologia]</span></div>
-              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="more" href="#contato">[Ver projeto] <svg class="ico" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg></a>
             </div>
           </article>
         </div>
@@ -255,14 +432,55 @@
         <div class="head rv">
           <span class="eyebrow">Como trabalhamos</span>
           <h2>Da sua ideia à solução pronta.</h2>
-          <p class="sub">Em cinco etapas bem definidas, usamos IA para ganhar tempo sem perder qualidade. Você acompanha cada fase com transparência e comunicação clara.</p>
+          <p class="sub">Em cinco etapas bem definidas, usamos IA para ganhar tempo sem perder qualidade. Você acompanha
+            cada fase com transparência e comunicação clara.</p>
         </div>
         <ol class="steps">
-        <li class="step rv"><span class="num">01</span><div><span class="kick">Diagnóstico</span><h3>Entendemos o seu problema</h3><p>Conversamos para entender o que toma o seu tempo e priorizamos o que traz resultado mais rápido.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> 24h a 48h</span></div></li>
-        <li class="step rv"><span class="num">02</span><div><span class="kick">Planejamento</span><h3>Desenhamos a solução</h3><p>Definimos escopo, fluxos e tecnologias antes de escrever a primeira linha de código.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> 3 a 7 dias</span></div></li>
-        <li class="step rv"><span class="num">03</span><div><span class="kick">Desenvolvimento</span><h3>Construímos com você</h3><p>Desenvolvemos com apoio de IA para entregar mais rápido e com mais qualidade, em partes curtas que você acompanha e aprova.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> 2 a 6 semanas</span></div></li>
-        <li class="step rv"><span class="num">04</span><div><span class="kick">Validação</span><h3>Testamos antes de publicar</h3><p>Testamos desempenho, segurança e usabilidade, com revisão assistida por IA, antes de colocar no ar.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> 3 a 7 dias</span></div></li>
-        <li class="step rv"><span class="num">05</span><div><span class="kick">Suporte</span><h3>Cuidamos depois do lançamento</h3><p>Hospedagem, monitoramento, manutenção e melhorias para o projeto continuar funcionando e evoluindo.</p><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> Contínuo</span></div></li>
+          <li class="step rv"><span class="num">01</span>
+            <div><span class="kick">Diagnóstico</span>
+              <h3>Entendemos o seu problema</h3>
+              <p>Conversamos para entender o que toma o seu tempo e priorizamos o que traz resultado mais rápido.</p>
+              <span class="dur"><svg class="ico" aria-hidden="true">
+                  <use href="#i-clock" />
+                </svg> 24h a 48h</span>
+            </div>
+          </li>
+          <li class="step rv"><span class="num">02</span>
+            <div><span class="kick">Planejamento</span>
+              <h3>Desenhamos a solução</h3>
+              <p>Definimos escopo, fluxos e tecnologias antes de escrever a primeira linha de código.</p><span
+                class="dur"><svg class="ico" aria-hidden="true">
+                  <use href="#i-clock" />
+                </svg> 3 a 7 dias</span>
+            </div>
+          </li>
+          <li class="step rv"><span class="num">03</span>
+            <div><span class="kick">Desenvolvimento</span>
+              <h3>Construímos com você</h3>
+              <p>Desenvolvemos com apoio de IA para entregar mais rápido e com mais qualidade, em partes curtas que você
+                acompanha e aprova.</p><span class="dur"><svg class="ico" aria-hidden="true">
+                  <use href="#i-clock" />
+                </svg> 2 a 6 semanas</span>
+            </div>
+          </li>
+          <li class="step rv"><span class="num">04</span>
+            <div><span class="kick">Validação</span>
+              <h3>Testamos antes de publicar</h3>
+              <p>Testamos desempenho, segurança e usabilidade, com revisão assistida por IA, antes de colocar no ar.</p>
+              <span class="dur"><svg class="ico" aria-hidden="true">
+                  <use href="#i-clock" />
+                </svg> 3 a 7 dias</span>
+            </div>
+          </li>
+          <li class="step rv"><span class="num">05</span>
+            <div><span class="kick">Suporte</span>
+              <h3>Cuidamos depois do lançamento</h3>
+              <p>Hospedagem, monitoramento, manutenção e melhorias para o projeto continuar funcionando e evoluindo.</p>
+              <span class="dur"><svg class="ico" aria-hidden="true">
+                  <use href="#i-clock" />
+                </svg> Contínuo</span>
+            </div>
+          </li>
         </ol>
       </div>
     </section>
@@ -272,16 +490,40 @@
         <div class="head rv">
           <span class="eyebrow">Tecnologias</span>
           <h2>Tecnologia certa para cada projeto.</h2>
-          <p class="sub">Utilizamos tecnologias modernas, seguras e confiáveis, escolhidas para a necessidade de cada cliente. Priorizamos qualidade, desempenho e facilidade de manutenção, e usamos IA no desenvolvimento para entregar soluções que funcionam hoje e evoluem com você.</p>
+          <p class="sub">Utilizamos tecnologias modernas, seguras e confiáveis, escolhidas para a necessidade de cada
+            cliente. Priorizamos qualidade, desempenho e facilidade de manutenção, e usamos IA no desenvolvimento para
+            entregar soluções que funcionam hoje e evoluem com você.</p>
         </div>
         <div class="tgrid">
-        <div class="tgroup rv"><h3>Frontend</h3><div class="chips"><span>React</span><span>TypeScript</span><span>Material UI</span></div></div>
-        <div class="tgroup rv"><h3>Mobile</h3><div class="chips"><span>React Native</span><span>Flutter</span></div></div>
-        <div class="tgroup rv"><h3>Backend</h3><div class="chips"><span>Django</span><span>FastAPI</span></div></div>
-        <div class="tgroup rv"><h3>Dados</h3><div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>Redis</span></div></div>
-        <div class="tgroup rv"><h3>Infra</h3><div class="chips"><span>Docker</span><span>Kubernetes</span><span>Linux / VPS</span><span>CI/CD</span></div></div>
-        <div class="tgroup rv"><h3>Automação e IA</h3><div class="chips"><span>n8n</span><span>MCP</span><span>LangChain</span></div></div>
-        <div class="tgroup rv"><h3>Integrações</h3><div class="chips"><span>Evolution API</span><span>WhatsApp</span><span>Telegram</span></div></div>
+          <div class="tgroup rv">
+            <h3>Frontend</h3>
+            <div class="chips"><span>React</span><span>TypeScript</span><span>Material UI</span></div>
+          </div>
+          <div class="tgroup rv">
+            <h3>Mobile</h3>
+            <div class="chips"><span>React Native</span><span>Flutter</span></div>
+          </div>
+          <div class="tgroup rv">
+            <h3>Backend</h3>
+            <div class="chips"><span>Django</span><span>FastAPI</span></div>
+          </div>
+          <div class="tgroup rv">
+            <h3>Dados</h3>
+            <div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>Redis</span></div>
+          </div>
+          <div class="tgroup rv">
+            <h3>Infra</h3>
+            <div class="chips"><span>Docker</span><span>Kubernetes</span><span>Linux / VPS</span><span>CI/CD</span>
+            </div>
+          </div>
+          <div class="tgroup rv">
+            <h3>Automação e IA</h3>
+            <div class="chips"><span>n8n</span><span>MCP</span><span>LangChain</span></div>
+          </div>
+          <div class="tgroup rv">
+            <h3>Integrações</h3>
+            <div class="chips"><span>Evolution API</span><span>WhatsApp</span><span>Telegram</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -291,24 +533,42 @@
         <div class="rv">
           <span class="eyebrow">Contato</span>
           <h2>Vamos conversar sobre o seu projeto?</h2>
-          <p class="sub">Conte o que você precisa e nossa equipe ajuda você a encontrar a solução certa, com clareza e sem complicação.</p>
+          <p class="sub">Conte o que você precisa e nossa equipe ajuda você a encontrar a solução certa, com clareza e
+            sem complicação.</p>
           <ul class="contact-list">
-            <li><a href="mailto:[e-mail de contato]"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>E-mail</small>[e-mail de contato]</span></a></li>
-            <li><a href="#contato"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span><span><small>WhatsApp</small>[número de contato]</span></a></li>
+            <li><a href="mailto:[e-mail de contato]"><span class="ic"><svg class="ico" aria-hidden="true">
+                    <use href="#i-mail" />
+                  </svg></span><span><small>E-mail</small>[e-mail de contato]</span></a></li>
+            <li><a href="#contato"><span class="ic"><svg class="ico" aria-hidden="true">
+                    <use href="#i-chat" />
+                  </svg></span><span><small>WhatsApp</small>[número de contato]</span></a></li>
           </ul>
-          <ul class="perks"><li>Resposta em até 48h</li><li>Atendimento humanizado</li><li>Resultados práticos</li></ul>
         </div>
         <form class="card leadform rv" id="leadForm" novalidate>
           <h3>Fale com a gente</h3>
           <p class="sub-s">Preencha os dados abaixo e retornamos com a melhor solução para o seu caso.</p>
           <div class="fields">
             <div class="field"><label for="name">Nome</label><input id="name" name="name" autocomplete="name" /></div>
-            <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" /></div>
-            <div class="field"><label for="company">Empresa (opcional)</label><input id="company" name="company" autocomplete="organization" /></div>
-            <div class="field"><label for="phone">WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+            <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email"
+                autocomplete="email" /></div>
+            <div class="field"><label for="company">Empresa (opcional)</label><input id="company" name="company"
+                autocomplete="organization" /></div>
+            <div class="field"><label for="phone">WhatsApp</label><input id="phone" name="phone" type="tel"
+                autocomplete="tel" /></div>
             <div class="field full"><label for="service">Do que você precisa?</label>
-              <select id="service" name="service"><option value="">Escolha uma opção</option><option>Landing Page</option><option>Aplicativo Mobile</option><option>Sistema Web</option><option>Segurança em Vibe Coding</option><option>Consultoria em IA</option><option>Ainda não sei</option></select></div>
-            <div class="field full"><label for="message">Conte um pouco sobre o seu projeto</label><textarea id="message" name="message" placeholder="Ex.: preciso de um site, sistema, aplicativo ou automação..."></textarea></div>
+              <select id="service" name="service">
+                <option value="">Escolha uma opção</option>
+                <option>Landing Page</option>
+                <option>Aplicativo Mobile</option>
+                <option>Sistema Web</option>
+                <option>Segurança em Vibe Coding</option>
+                <option>Consultoria em IA</option>
+                <option>Ainda não sei</option>
+              </select>
+            </div>
+            <div class="field full"><label for="message">Conte um pouco sobre o seu projeto</label><textarea
+                id="message" name="message"
+                placeholder="Ex.: preciso de um site, sistema, aplicativo ou automação..."></textarea></div>
           </div>
           <div class="form-foot">
             <small>Seus dados serão usados apenas para falar sobre o seu projeto.</small>
@@ -323,22 +583,35 @@
 
   <footer>
     <div class="container foot">
-      <a href="#inicio" class="brand" aria-label="Ariramba Sistemas - início"><img src="img/logo-ariramba.webp?v=2" alt="" width="40" height="40" /> <span>Ariramba</span></a>
+      <a href="#inicio" class="brand" aria-label="Ariramba Sistemas - início"><img src="img/logo-ariramba.webp?v=2"
+          alt="" width="40" height="40" /> <span>Ariramba</span></a>
       <p>Soluções tecnológicas para quem não pode perder tempo.</p>
-      <ul class="flinks"><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#portfolio">Portfólio</a></li><li><a href="#processo">Processo</a></li><li><a href="#tecnologias">Tecnologias</a></li><li><a href="#contato">Contato</a></li></ul>
-      <div class="copy">&copy; <span id="year">2026</span> Ariramba Sistemas. <button type="button" class="cookie-link" id="cookiePrefs">Política de cookies</button></div>
+      <ul class="flinks">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="copy">&copy; <span id="year">2026</span> Ariramba Sistemas. <button type="button" class="cookie-link"
+          id="cookiePrefs">Política de cookies</button></div>
     </div>
   </footer>
 
   <div class="cookie" id="cookieBox" role="dialog" aria-labelledby="cookieTitle" aria-describedby="cookieText" hidden>
     <p class="cookie-title" id="cookieTitle">Política de cookies</p>
-    <p id="cookieText">Usamos cookies para medir visitas e o resultado das nossas campanhas. Eles só são ativados se você aceitar.</p>
+    <p id="cookieText">Usamos cookies para medir visitas e o resultado das nossas campanhas. Eles só são ativados se
+      você aceitar.</p>
     <details class="cookie-more">
       <summary>Ver detalhes</summary>
       <ul>
         <li><b>Essenciais:</b> guardam apenas a sua escolha sobre cookies, no seu navegador.</li>
-        <li><b>Medição e publicidade:</b> o pixel da OpenAI registra visitas e conversões e pode usar dados de formulários de forma criptografada para medir anúncios.</li>
-        <li>Não vendemos seus dados. Você pode mudar sua escolha a qualquer momento em “Política de cookies”, no rodapé.</li>
+        <li><b>Medição e publicidade:</b> o pixel da OpenAI registra visitas e conversões e pode usar dados de
+          formulários de forma criptografada para medir anúncios.</li>
+        <li>Não vendemos seus dados. Você pode mudar sua escolha a qualquer momento em “Política de cookies”, no rodapé.
+        </li>
       </ul>
     </details>
     <div class="cookie-actions">
@@ -347,7 +620,10 @@
     </div>
   </div>
 
-  <button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></button>
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg class="ico" aria-hidden="true">
+      <use href="#i-up" />
+    </svg></button>
   <script src="js/main.min.js?v=4" defer></script>
 </body>
+
 </html>
